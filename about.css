@@ -1,0 +1,1341 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.dontHaveLine{
+    text-decoration: none;
+}
+
+.overlayNavBar{
+    width: 100%;
+    height: 0;
+    position: fixed;
+    /*to go over the content*/
+    z-index: 999;
+    background-color: #25a81d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.navigationElements{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.nameAndXContainer{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nameAndXContainer h1{
+    margin-left: 2%;
+    font-size: 28px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.xContainer{
+    margin-right: 2%;
+    height: 50px;
+    width: 50px;
+}
+#cross{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.elements{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.elements h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.elements a{
+    color: #fff;
+  
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.elements a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.elements a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+#barAddress{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    
+    margin-bottom: 0px;
+}
+#barPhoneNumber{
+    margin-top: 10px;
+    
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.navigationSocialIcons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.actualSocialContainer{
+    
+    width: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#navFacebook{
+    height: 30px;
+    width: 30px;
+}
+#navInsta{
+    height: 30px;
+    width: 30px;
+}
+
+.clickedContent{
+    display: none;
+    height: 700px;
+    width: 100%;
+    background-color: white;
+}
+
+.nameAndCloseButton{
+    margin-top: 10px;
+    
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.nameAndCloseButton h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+
+}
+.closeButton{
+    height: 50px;
+    width: 50px;
+
+}
+#cross{
+    width: 100%;
+    height: 100%;
+}
+
+.sectionAndLine{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+.sectionAndLine h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+}
+.straightLine{
+    width: 99%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #f5a71c;
+}
+
+
+.opening{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./aboutUsImages/restaurantFulImage.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.topNavBar{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+
+}
+
+.restaurantName{
+    font-family: 'Montserrat', sans-serif;
+    
+    color: white;
+    z-index: 99;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.restaurantName h1{
+    margin-left: 15px;
+}
+
+.optionsAndIcons{
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    
+}
+
+
+.responsiveNavBar{
+    display: none;
+}
+
+.options{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: white;
+    z-index: 99;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.options a{
+    color: #fff;
+  
+    text-decoration: none;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.options a::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.options a:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+
+.options p:nth-child(2){
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.options p:nth-child(3){
+    margin-right: 20px;
+}
+.socials{
+    height: 100%;
+    z-index: 99;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.socials img:nth-child(3){
+    margin-right: 20px;
+}
+.socials img:nth-child(2){
+    margin-right: 10px;
+}
+.socials img:nth-child(1){
+    margin-right: 10px;
+}
+#insta{
+    height: 35px;
+    width: 35px;
+
+}
+
+#tiktok{
+    height: 35px;
+    width: 35px;
+}
+#facebook{
+    height: 35px;
+    width: 35px;
+}
+
+.circleContainer{
+    margin-right: 5%;
+    z-index: 99;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    width: 20px;
+    height: 3px;
+    background-color: black;
+}
+.line:nth-child(1){
+    margin-bottom: 3px;
+}
+.line:nth-child(2){
+    margin-bottom: 3px;
+}
+
+.openingBottomPart{
+    height: 80%;
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
+
+}
+
+.leafContainer{
+    /*background-color: red;*/
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
+    position: relative;
+}
+
+.actualLeaf{
+    z-index: 99;
+    height: 300px;
+    width: 300px;
+}
+
+#leaf{
+    
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    
+    
+}
+
+
+.catchyOpening{
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+    bottom: -12%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.catchyOpening h1{
+    color: white;
+    z-index: 99;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 80px;
+}
+
+
+.ourStoryContainer{
+    margin-top: 60px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 700px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.storyContainer{
+    width: 90%;
+    height: 100%;
+    /*background-color: blue;*/
+    display: flex;
+    flex-direction: row;
+}
+
+.storyLeft{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.storyTitle{
+    font-family: 'Montserrat', sans-serif;
+    /*color: #1a7514;*/
+    color: #1e9117;
+    font-size: 30px;
+}
+.storyTitle h1{
+    margin-top: 0px;
+}
+.textContainer{
+    width: 85%;
+    height: 100%;
+}
+
+.textStory p{
+    line-height: 1.5;
+    font-size: 20px;
+    color: #520c0c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+.storyRight{
+    width: 50%;
+    height: 100%;
+}
+.family{
+    height: 100%;
+    width: 90%;
+    object-fit: cover;
+}
+
+.followUsContainer{
+    margin-top: 200px;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.instagramSignContainer{
+    height: 250px;
+    width: 250px;
+    
+}
+#instaSign{
+    height: 100%;
+    width: 100%;
+}
+.atSymbolContainer{
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+}
+#atSign{
+    width: 100%;
+    height: 100%;
+}
+.followUsContainer h1{
+    margin-left: 5px;
+    color: #0eb554;
+    font-size: 50px;
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 500;
+}
+
+.atSymbolAndNameContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*.followUsIconContainer{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+   
+    top: 15%;
+    left: 75%;
+
+}
+#followUsIcon{
+    height: 100%;
+    width: 100%;
+}*/
+
+.swiper{
+    width: 100%;
+    height: 300px;
+}
+.wholeImagesContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+.leftTop{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+.leftTop img{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+.rightBottom{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.rightBottom img{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*start of footer section*/
+
+.footerSection{
+    margin-top: 0px;
+    width: 100%;
+    height: 390px;
+    background-color: #f5a71c;
+    display: flex;
+    flex-direction: column;
+}
+.topFooter{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+}
+.bottomFooter{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*background-color: red;*/
+}
+
+.bottomFooter p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.nameAndSombrero{
+    height: 100%;
+    width: 35%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: black;*/
+    
+}
+
+.nameAndSombrero h1{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    margin-right: 0px;
+    /*background-color: blue;*/
+    width: 100%;
+    
+    text-align: center;
+    
+}
+
+#footerSombrero{
+    height: 140px;
+    width: 140px;
+}
+
+.restaurantInfo{
+    width: 21.66%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*background-color: red;*/
+}
+
+.wholeContainerFooter a{
+    text-decoration: none;
+    color: white;
+}
+.restaurantInfo .wholeContainerFooter{
+    height: 85%;
+    width: 75%;
+    /*background-color: blue;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.hoursInfo .wholeContainerFooter{
+    height: 85%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    /*background-color: red;*/
+}
+
+.websiteSections .wholeContainerFooter{
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    width: 75%;
+    /*background-color: yellowgreen;*/
+}
+
+.visitUs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    color: white;
+}
+
+.visitUs h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.visitUs p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+
+}
+
+.email{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.email h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+.email p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.phoneNumber{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.phoneNumber h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+.phoneNumber p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+}
+
+.hoursInfo{
+    width: 21.66%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: blueviolet;*/
+    
+}
+
+.hours{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.hours h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+   
+}
+.hours h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 23px;
+    margin-top: 0px;
+}
+.hours p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+}
+
+.closed{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.closed h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 23px;
+    margin-top: 0px;
+}
+.closed p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+}
+
+.websiteSections{
+    width: 21.66%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /*background-color: violet;*/
+}
+
+.wholeContainerFooter h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+}
+
+
+
+
+
+
+@media (max-width: 1250px){
+    .storyLeft{
+        width: 60%;
+    }
+    .storyRight{
+        width: 40%;
+        
+    }
+    .family{
+        width: 100%;
+    }
+    /*footer changes*/
+    .nameAndSombrero{
+        width: 20%;
+        justify-content: flex-start;
+    }
+    .nameAndSombrero h1{
+        margin-top: 25px;
+        font-size: 28px;
+    }
+    #footerSombrero{
+        height: 100px;
+        width: 100px;
+    }
+    .restaurantInfo{
+        width: 35%;
+    }
+    .hoursInfo{
+        width: 22.5%;
+    }
+    .websiteSections{
+        width: 22.5%;
+    }
+}
+
+@media (max-width: 1185px){
+    .restaurantName h1{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1025px){
+    .opening{
+        height: 850px;
+    }
+
+    .ourStoryContainer{
+        height: 900px;
+    }
+
+    .storyContainer{
+        flex-direction: column-reverse;
+       
+    }
+    .storyLeft{
+        /*background-color: blue;*/
+        height: 60%;
+        width: 100%;
+    }
+    .storyRight{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 40%;
+        width: 100%;
+    }
+    .family{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .textContainer{
+        width: 100%;
+    }
+    .storyTitle{
+        
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .storyTitle h1{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .textStory{
+        width: 100%;
+        /*display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;*/
+        text-align: center;
+    }
+
+    .followUsContainer{
+        margin-top: 0px;
+    }
+    
+
+}
+
+@media (max-width: 1000px){
+    .swiper{
+        height: 280px;
+    }
+}
+@media (max-width: 980px){
+    .opening{
+        height: 820px;
+    }
+}
+
+@media (max-width: 950px){
+    .swiper{
+        height: 270px;
+    }
+}
+@media (max-width: 900px){
+    .opening{
+        height: 750px;
+    }
+    .swiper{
+        height: 260px;
+    }
+}
+
+@media (max-width: 915px){
+    .optionsAndIcons{
+        display: none;
+    }
+
+    .responsiveNavBar{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 40%;
+        
+    }
+
+    .restaurantName{
+        width: 60%;
+    }
+    
+
+}
+
+@media (max-width: 850px){
+    .opening{
+        height: 650px;
+    }
+    .swiper{
+        height: 250px;
+    }
+    .visitUs h1{
+        font-size: 22px;
+    }
+    .visitUs p{
+        font-size: 16px;
+    }
+    .email h1{
+        font-size: 22px;
+        
+    }
+    .email p{
+        font-size: 16px;
+    }
+    .phoneNumber h1{
+        font-size: 22px;
+    }
+    .phoneNumber p{
+        font-size: 16px;
+    }
+    .hours h1{
+        font-size: 22px;
+    }
+    .hours h2{
+        font-size: 19px;
+    }
+    .hours p{
+        font-size: 16px;
+    }
+    .closed h2{
+        font-size: 19px;
+    }
+    .closed p{
+        font-size: 16px;
+    }
+    .websiteSections .wholeContainerFooter h1{
+        font-size: 22px;
+    }
+    .nameAndSombrero h1{
+        font-size: 24px;
+    }
+    #footerSombrero{
+        height: 70px;
+        width: 70px;
+    }
+
+}
+
+@media (max-width: 800px){
+    .swiper{
+        height: 240px;
+    }
+    .followUsContainer{
+        height: auto;
+        flex-direction: column;
+    }
+    .instagramSignContainer{
+        
+        height: 100px;
+    }
+    .atSymbolAndNameContainer{
+        margin-left: 0px;
+        align-items: flex-start;
+        
+    }
+    .atSymbolAndNameContainer h1{
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+    .actualSocialContainer{
+        width: 12%;
+    }
+}
+
+
+@media (max-width: 750px){
+    /*.storyRight{
+        height: 30%;
+
+    }
+    .storyLeft{
+        height: 70%;
+    }*/
+    .storyTitle h1{
+        margin-bottom: 0px;
+    }
+    .ourStoryContainer{
+        height: 1000px;
+    }
+    .swiper{
+        height: 230px;
+    }
+}
+
+@media (max-width: 700px){
+    .swiper{
+        height: 220px;
+    }
+}
+
+@media (max-width: 665px){
+    .footerSection{
+        height: auto;
+    }
+    .topFooter{
+        flex-direction: column-reverse;
+        
+    }
+
+    .websiteSections{
+        width: 100%;
+
+    }
+    .websiteSections .wholeContainerFooter{
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 80%;
+        /*background-color: blue;*/
+    }
+    .hoursInfo{
+        width: 100%;
+        /*background-color: violet;*/
+    }
+    .hoursInfo .wholeContainerFooter{
+        width: 80%;
+        height: 100%;
+        align-items: center;
+        /*background-color: red;*/
+    }
+    .hours{
+        align-items: center;
+    }
+    .restaurantInfo{
+        width: 100%;
+
+    }
+    .restaurantInfo .wholeContainerFooter{
+
+        width: 80%;
+        height: 100%;
+        /*background-color: red;*/
+    }
+    .visitUs{
+        align-items: center;
+    }
+    .email{
+        align-items: center;
+    }
+    .phoneNumber{
+        align-items: center;
+    }
+    .nameAndSombrero{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .nameAndSombrero h1{
+        margin-top: 10px;
+    }
+    
+    .bottomFooter p{
+        font-size: 17px;
+    }
+    .bottomFooter{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 650px){
+    .opening{
+        height: 600px;
+    }
+    .storyTitle{
+        font-size: 22px;
+    }
+    .ourStoryContainer{
+        height: 1200px;
+    }
+    .swiper{
+        height: 210px;
+    }
+    
+}
+
+@media (max-width: 600px){
+    .swiper{
+        height: 200px;
+    }
+    .nameAndXContainer h1{
+        font-size: 20px;
+    }
+    .xContainer{
+        height: 35px;
+        width: 35px;
+    }
+    .elements h1{
+        font-size: 17px;
+    }
+    #barAddress{
+        font-size: 13px;
+    }
+    #barPhoneNumber{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 550px){
+    .swiper{
+        height: 500px;
+    }
+    .wholeImagesContainer{
+        flex-direction: column;
+        
+    }
+    .leftTop{
+        width: 100%;
+        height: 50%;
+    }
+    .leftTop img{
+        width: 50%;
+        height: 100%;
+    }
+    .rightBottom{
+        width: 100%;
+        height: 50%;
+    }
+    .rightBottom img{
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 530px){
+    .instagramSignContainer{
+        height: 80px;
+    }
+    .atSymbolContainer{
+        height: 30px;
+        width: 30px;
+    }
+    .atSymbolAndNameContainer h1{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px){
+    .opening{
+        height: 550px;
+    }
+    .textStory p{
+        font-size: 15px;
+    }
+    .ourStoryContainer{
+        height: 700px;
+    }
+    .storyRight{
+        height: 30%;
+    }
+    .storyLeft{
+        height: 70%;
+    }
+    .websiteSections .wholeContainerFooter{
+        width: 94%;
+       
+    }
+    .websiteSections .wholeContainerFooter h1{
+        font-size: 19px;
+       
+    }
+    .bottomFooter p{
+        text-align: center;
+        font-size: 15px;
+    }
+    .visitUs p{
+        text-align: center;
+    }
+    .actualSocialContainer{
+        width: 18%;
+    }
+}
+
+@media (max-width: 450px){
+    .actualLeaf{
+        height: 250px;
+        width: 250px;
+    }
+    .catchyOpening h1{
+        font-size: 55px;
+    }
+    .restaurantName h1{
+        font-size: 18px;
+    }
+
+    
+
+    /*.ourStoryContainer{
+        height: 600px;
+    }*/
+    .ourStoryContainer{
+        height: 800px;
+    }
+
+    .storyRight{
+        height: 30%;
+    }
+    .storyLeft{
+        height: 70%;
+    }
+}
+
+@media (max-width: 400px){
+    .ourStoryContainer{
+        height: 900px;
+    }
+    .swiper{
+        height: 400px;
+    }
+}
+
+@media (max-width: 350px){
+    .atSymbolContainer{
+        height: 22px;
+        width: 22px;
+    }
+    .atSymbolAndNameContainer h1{
+        font-size: 22px;
+    }
+    .instagramSignContainer{
+        height: 50px;
+    }
+    #barAddress{
+        text-align: center;
+    }
+    #barPhoneNumber{
+        text-align: center;
+    }
+}
+
+@media (max-width: 330px){
+    .ourStoryContainer{
+        height: 935px;
+    }
+    .swiper{
+        height: 340px;
+    }
+}
+@media (max-width: 300px){
+    .opening{
+        height: 480px;
+    }
+    
+
+    .actualLeaf{
+        height: 200px;
+        width: 200px;
+    }
+    .catchyOpening{
+        bottom: -8%;
+    }
+    .catchyOpening h1{
+        font-size: 42px;
+    }
+
+    .textStory p{
+        line-height: 1.3;
+    }
+    .websiteSections .wholeContainerFooter h1{
+        font-size: 15px;
+    }
+
+}
+
+
+

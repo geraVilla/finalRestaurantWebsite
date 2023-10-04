@@ -1,0 +1,3391 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.dontHaveLine{
+    text-decoration: none;
+}
+
+.overlayNavBar{
+    width: 100%;
+    height: 0;
+    position: fixed;
+    /*to go over the content*/
+    z-index: 999;
+    background-color: #25a81d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.navigationElements{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.nameAndXContainer{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nameAndXContainer h1{
+    margin-left: 2%;
+    font-size: 28px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.xContainer{
+    margin-right: 2%;
+    height: 50px;
+    width: 50px;
+}
+#cross{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.elements{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.elements h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.elements a{
+    color: #fff;
+  
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.elements a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.elements a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+#barAddress{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    
+    margin-bottom: 0px;
+}
+#barPhoneNumber{
+    margin-top: 10px;
+    
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.navigationSocialIcons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.actualSocialContainer{
+    
+    width: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#navFacebook{
+    height: 30px;
+    width: 30px;
+}
+#navInsta{
+    height: 30px;
+    width: 30px;
+}
+
+.opening{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./openingImages/jarritos-mexican-soda-bA3VwdUYduY-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+#tacoOne{
+    z-index: 99;
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    height: 70px;
+    width: 70px;
+}
+.taco{
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+}
+
+#tacoTwo{
+    z-index: 99;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    height: 28px;
+    width: 28px;
+    transform: rotate(40deg);
+}
+
+#tacoThree{
+    z-index: 99;
+    position: absolute;
+    top: 80%;
+    left: 22%;
+    height: 32px;
+    width: 32px;
+    transform: rotate(-30deg);
+}
+
+#tacoFour{
+    z-index: 99;
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    height: 35px;
+    width: 35px;
+    transform: rotate(-50deg);
+}
+
+#tacoFive{
+    z-index: 99;
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    height: 30px;
+    width: 30px;
+    transform: rotate(70deg);
+}
+
+#tacoSix{
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    height: 20px;
+    width: 20px;
+    transform: rotate(-25deg);
+}
+
+#tacoSeven{
+    z-index: 99;
+    position: absolute;
+    top: 70%;
+    left: 90%;
+    height: 38px;
+    width: 38px;
+    transform: rotate(60deg);
+}
+
+
+
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.topNavBar{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+
+}
+
+.restaurantName{
+    font-family: 'Montserrat', sans-serif;
+    
+    color: white;
+    z-index: 99;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.restaurantName h1{
+    margin-left: 15px;
+}
+
+.optionsAndIcons{
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    
+}
+
+.responsiveNavBar{
+    display: none;
+}
+
+.options{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: white;
+    z-index: 99;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*background-color: black;*/
+}
+
+.options a{
+    color: #fff;
+  
+    text-decoration: none;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.options a::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.options a:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+.options p:nth-child(2){
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.options p:nth-child(3){
+    margin-right: 20px;
+}
+.socials{
+    height: 100%;
+    z-index: 99;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+.socials img:nth-child(3){
+    margin-right: 20px;
+}
+.socials img:nth-child(2){
+    margin-right: 10px;
+}
+.socials img:nth-child(1){
+    margin-right: 10px;
+}
+#insta{
+    height: 35px;
+    width: 35px;
+
+}
+
+#tiktok{
+    height: 35px;
+    width: 35px;
+}
+#facebook{
+    height: 35px;
+    width: 35px;
+}
+
+.circleContainer{
+    margin-right: 5%;
+    z-index: 99;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    width: 20px;
+    height: 3px;
+    background-color: black;
+}
+.line:nth-child(1){
+    margin-bottom: 3px;
+}
+.line:nth-child(2){
+    margin-bottom: 3px;
+}
+
+
+.openingBottomPart{
+    height: 80%;
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
+
+}
+.sombreroContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#sombrero{
+    margin-top: 40px;
+    z-index: 99;
+    height: 140px;
+    width: 140px;
+}
+
+.catchyOpening{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.catchyOpening h1{
+    color: white;
+    z-index: 99;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 80px;
+}
+
+.orderAndMenuOptions{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.centerButtons{
+    width: 30%;
+    
+    /*background-color: blue;*/
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+    justify-content: center;
+}
+
+.orderOnlineButton{
+    z-index: 99;
+    width: 180px;
+    height: 50px;
+    border: 5px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+   
+    
+}
+.orderOnlineButton:hover{
+    background-color: #028A0F;
+}
+.orderOnlineButton p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.seeMenuButton{
+    z-index: 99;
+    width: 180px;
+    height: 50px;
+    border: 5px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+
+.seeMenuButton:hover{
+    background-color: #028A0F;
+}
+
+.seeMenuButton p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+
+/*start of our orgin section*/
+.ourOriginContainer{
+    
+    margin-top: 80px;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    /*background-color: red;*/
+    
+}
+
+.ourOriginLeft{
+    width: 40%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.ourOriginRight{
+    width: 60%;
+    height: 100%;
+    /*background-color: blue;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#michoacan{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.ourOriginTextContainer{
+    position: relative;
+    height: 100%;
+    width: 70%;
+    
+    display: flex;
+    flex-direction: column;
+    
+    /*margin-right: 20px;*/
+    
+}
+
+.firstButterFlyContainer{
+    position: absolute;
+    top: 80%;
+    left: 55%;
+    height: 65px;
+    width: 65px;
+    transform: rotate(25deg);
+
+}
+
+#firstButterfly{
+    height: 100%;
+    width: 100%;
+}
+.originAndCactus{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.originAndCactus p{
+    font-family: 'Lobster', cursive;
+
+    color: #f5a71c;
+    font-size: 25px;
+}
+#cactus{
+    height: 35px;
+    width: 35px;
+}
+
+.mainOriginTitle{
+    display: flex;
+    flex-direction: column;
+    /*color: #1a7514;*/
+    color: #1e9117;
+    font-family: 'Lilita One', cursive;
+    font-size: 25px;
+}
+.mainOriginTitle h1:nth-child(1){
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.mainOriginTitle h1:nth-child(2){
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.mainOriginTitle h1:nth-child(3){
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.originText{
+    color: #520c0c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 2;
+}
+
+.learnAboutUsButton{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 180px;
+    background-color: #f5a71c;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+.learnAboutUsButton a{
+    text-decoration: none;
+    color: white;
+}
+.learnAboutUsButton p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+.ourStoryContainer{
+    margin-top: 140px;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+}
+
+.ourStoryLeft{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*pinata css code*/
+.pinataAndBubbleContainer{
+    
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: -10%;
+    top: -30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#pinata{
+    height: 150px;
+    width: 150px;
+    transform: scaleX(-1);
+}
+
+#bubble{
+    position: absolute;
+    height: 110px;
+    width: 110px;
+}
+.bubbleContainer{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 14%;
+    left: 70%;
+}
+#bubbleText{
+    color: #f5a71c;
+    position: absolute;
+    top: 12%;
+    transform: rotate(-5deg);
+    font-family: 'Gochi Hand', cursive;
+    font-size: 30px;
+}
+
+.ourStoryRight{
+    
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#restaurant{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ourStoryTextContainer{
+    
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.storyAndCactus{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.storyAndCactus p{
+    font-family: 'Lobster', cursive;
+
+    color: #f5a71c;
+    font-size: 25px;
+}
+
+.mainStoryTitle{
+    display: flex;
+    flex-direction: column;
+    /*color: #1a7514;*/
+    color: #1e9117;
+    font-family: 'Lilita One', cursive;
+    font-size: 25px;
+}
+
+.mainStoryTitle h1:nth-child(1){
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.mainStoryTitle h1:nth-child(2){
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.storyText{
+    color: #520c0c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 2;
+}
+
+.viewOurMenuButton{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 180px;
+    background-color: #f5a71c;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.viewOurMenuButton a{
+    text-decoration: none;
+    color: white;
+}
+.viewOurMenuButton p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*middle section, so intro to food secion*/
+.introToFoodContainer{
+    margin-top: 150px;
+    width: 100%;
+    height: 800px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.introToFoodContainer::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./introToFoodImages/sean-benesh-5yzlsfYj44U-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+
+}
+
+.introToFoodOverlay{
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+#foodMessageIntro{
+    z-index: 99;
+    position: absolute;
+    color: white;
+    font-family: 'Nerko One', cursive;
+    font-size: 100px;
+}
+
+.butterFlyContainer{
+    position: absolute;
+    z-index: 99;
+    top: 15%;
+    left: 70%;
+    height: 300px;
+    width: 300px;
+}
+#startOfFoodButterfly{
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*start of all menus section*/
+
+.secondButton{
+    display: none;
+}
+
+.allMenuOptionsContainer{
+    width: 100%;
+    height: 700px;
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+}
+
+.allMenusLeft{
+    width: 40%;
+    height: 100%;
+    /*background-color: antiquewhite;*/
+}
+
+
+.menuTextContainer{
+    margin-left: 10px;
+    width: 90%;
+    height: 100%;
+    /*background-color: yellowgreen;*/
+    display: flex;
+    flex-direction: column;
+
+   
+}
+
+.menuAndCactus{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.menuAndCactus p{
+    font-family: 'Lobster', cursive;
+
+    color: #f5a71c;
+    font-size: 25px;
+}
+
+.mainMenuTitle{
+    display: flex;
+    flex-direction: column;
+    /*color: #1a7514;*/
+    color: #1e9117;
+    font-family: 'Lilita One', cursive;
+    font-size: 25px;
+}
+
+.mainMenuTitle h1:nth-child(1){
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.mainMenuTitle h1:nth-child(2){
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.mainMenuTitle h1:nth-child(3){
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.menuText{
+    color: #520c0c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 2;
+}
+
+.firstOrderButtonContainer{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 180px;
+    background-color: #f5a71c;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.firstOrderButtonContainer a{
+    text-decoration: none;
+    color: white;
+}
+.firstOrderButtonContainer p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.allMenusRight{
+    width: 60%;
+    height: 100%;
+    /*background-color: violet;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.allFoodOptionsContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.topMenu{
+    height: 50%;
+    width: 100%;
+    /*background-color: tomato;*/
+    display: flex;
+    flex-direction: row;
+}
+.bottomMenu{
+    height: 50%;
+    width: 100%;
+    /*background-color: thistle;*/
+    display: flex;
+    flex-direction: row;
+}
+
+.menuOption{
+    width: 33.33%;
+    height: 100%;
+    
+}
+.menuOption:nth-child(1){
+   /* background-color: red;*/
+    
+}
+
+.menuOption:nth-child(2){
+    /*background-color: blue;  */  
+}
+
+.menuOption:nth-child(3){
+    /*background-color: aqua;*/ 
+}
+.orderButtonContainer{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 180px;
+    background-color: #f5a71c;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.orderButtonContainer a{
+    text-decoration: none;
+    color: white;
+}
+.orderButtonContainer p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menuOptionImageContainer{
+    height: 80%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.menuNameContainer{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    /*background-color: blue;*/
+    
+}
+
+.menuNameContainer h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /*color: #1a7514;*/
+    color: #1e9117;
+    font-family: 'Lilita One', cursive;
+}
+
+.foodImage{
+    /*background-color: blue;*/
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+}
+
+/*.menuOption:nth-child(6) .menuOptionImageContainer{
+    background-color: #028A0F;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #1a7514;
+    font-family: 'Lilita One', cursive;
+}*/
+
+#lastMenuOption{
+    cursor: pointer;
+}
+#lastMenuOption .menuOptionImageContainer{
+    height: 80%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+   
+    
+}
+
+#lastMenuOption .menuOptionImageContainer .greenBox{
+    height: 90%;
+    width: 90%;
+    /*background-color: #028A0F;*/
+    background-color: #1e9117;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#lastMenuOption .menuOptionImageContainer h1{
+    font-family: 'Nerko One', cursive;
+    color: white;
+    font-size: 35px;
+}
+
+.allFoodOptionsHorizontalScroll{
+    display: none;
+    /*display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow: auto;
+    white-space: nowrap;*/
+    
+}
+
+
+
+
+.menuOptionScroll{
+    /*background-color: blue;*/
+    /*background-color: aqua;*/
+    /*height: 250px;
+    width: 250px;*/
+    /*height: 80%;*/
+    /*display: flex;
+    flex-direction: column;*/
+    height: 100%;
+    width: 200px;
+    
+}
+.menuOptionScrollImageContainer{
+    height: 80%;
+    width: 100%;
+    
+}
+
+
+
+
+.scrollImage{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menuNameScrollContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: 20%;
+}
+
+.menuNameScrollContainer h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #1e9117;
+}
+
+.horizontalGreenBoxContainer{
+    
+    /*background-color: blueviolet;*/
+    height: 100%;
+    width: 200px;
+    
+}
+.greenContainer{
+    
+    height: 80%;
+    width: 100%;
+    background-color: #028A0F;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.greenContainer h1{
+    font-size: 24px;
+}
+.empty{
+    height: 20%;
+    width: 100%;
+}
+
+/*#containerOfGreenBox{
+    height: 100%;
+    width: 200px;
+}
+
+#greenBox{
+    height: 80%;
+    width: 100%;
+    background-color: #028A0F;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#greenBox h1{
+    color: white;
+    font-size: 22px;
+}
+#bottomOfGreenBox{
+    height: 20%;
+    width: 100%;
+}*/
+
+.menuOptionScroll:nth-child(1){
+    margin-left: 10px;
+}
+.menuOptionScroll:nth-child(2){
+    margin-left: 10px;
+}
+.menuOptionScroll:nth-child(3){
+    margin-left: 10px;
+}
+.menuOptionScroll:nth-child(4){
+    margin-left: 10px;
+}
+.menuOptionScroll:nth-child(5){
+    margin-left: 10px;
+}
+.menuOptionScroll:nth-child(6){
+    margin-left: 10px;
+}
+
+.menuOptionScroll:nth-child(1) #createGreenBackground{
+    height: 80%;
+    width: 100%;
+    /*background-color: #028A0F;*/
+    background-color: #1e9117;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menuOptionScroll:nth-child(1) #createGreenBackground h1{
+    color: white;
+    font-size: 32px;
+    font-family: 'Nerko One', cursive;
+}
+
+.menuOptionScroll:nth-child(1) #createGreenBackground{
+    background-color: #028A0F;
+}
+
+.menuOptionScroll:nth-child(1) .menuNameScrollContainer h1{
+    opacity: 0;
+}
+
+.menuNameScrollContainer{
+    color: #1a7514;
+    font-family: 'Lilita One', cursive;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.orderButtonContainer{
+    display: none;
+}
+
+
+
+.aguasFrescasSectionContainer{
+    margin-top: 40px;
+    width: 100%;
+    height: 750px;
+    background-image: url(./aguasFrescasImages/design-space-wallpaper.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.patternContainer{
+    /*position: absolute;
+    top: 0%;
+    left: 0;*/
+    width: 100%;
+    height: 5%;
+    display: flex;
+    flex-direction: column;
+    background-color: #eb7b31;
+}
+
+.patternLine{
+    height: 5%;
+    width: 100%;
+    background-color: rgba(255, 217, 0, 0.7);
+}
+
+.actualPattern{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.pattern{
+    height: 100%;
+    width: 5%;
+    
+
+}
+
+.actualAguasFrescasContent{
+    /*to avoid the pattern
+    since patter takes 5%
+    from whole container*/
+    /*margin-top: 5%;*/
+    /*height: 95%;
+    width: 100%;
+    background-color: red;*/
+    
+    height: 95%;
+    width: 100%;
+    
+    
+
+}
+
+.topAguasFrescasContent{
+    height: 80%;
+    width: 100%;
+    position: relative;
+    
+
+    
+}
+.bottomAguasFrescasContent{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+   
+}
+
+.drinkTitles{
+    position: relative;
+    /*height: 15%;*/
+    height: 20%;
+    width: 100%;
+    /*background-color: aqua;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: blue;*/
+}
+.drinkTitles h1:nth-child(1){
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: 'Monserrat', sans-serif;
+    color: white;
+    font-size: 50px;
+}
+.drinkTitles h2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: 'Monserrat', sans-serif;
+    color: white;
+    font-size: 35px;
+    
+}
+
+.drinkOptions{
+    height: 85%;
+    
+    width: 100%;
+    z-index: 999;
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.drink{
+    position: relative;
+    /*background-color: tomato;*/
+    width: 35%;
+    /*width: 47%;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.drinkNameAndImage{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.drinkNameAndImage p{
+    font-family: 'Lilita One', cursive;
+    color: #FAFEFD;
+    /*font-size: 30px;*/
+    font-size: 40px;
+}
+.drinkNameAndImage img{
+    margin-left: 4%;
+    height: 40px;
+    width: 40px;
+}
+
+.price{
+    font-family: 'Lilita One', cursive;
+    color: white;
+    font-size: 40px;
+}
+
+.moreButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.moreButton p{
+    cursor: pointer;
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 500;
+   color: #028A0F;
+}
+
+.sunContainer{
+    position: absolute;
+    top: 5%;
+    left: 80%;
+    height: 150px;
+    width: 150px;
+
+}
+.sun{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.drinkImageContainer{
+    position: absolute;
+    bottom: 3%;
+    left: 10%;
+    height: 400px;
+    width: 280px;
+}
+.drinkImage{
+    height: 100%;
+    width: 100%;
+}
+
+
+/*.drink:nth-child(5){
+    position: relative;  
+}*/
+.chalkContainer{
+    z-index: 999;
+    
+    position: absolute;
+    right: -20%;
+    bottom: 35%;
+    height: 80px;
+    width: 80px;
+   
+}
+.chalk{
+    height: 100%;
+    width: 100%;
+    
+    z-index: 999;
+}
+
+.smallDrinkImageContainer{
+    display: none;
+}
+
+.smallDrink{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+/*card slider css*/
+
+.bottomTitle{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bottomTitle h1:nth-child(1){
+    margin-right: 0px;
+    margin-left: 0px;
+    z-index: 99;
+    margin-top: 60px;
+    font-family: 'Lilita One', sans-serif;
+    margin-bottom: 0px;
+    color: #520c0c;
+}
+.bottomTitle h1:nth-child(2){
+    margin-left: 0px;
+    margin-right: 0px;
+    font-family: 'Lilita One', sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #520c0c;
+}
+
+.bottomSection{
+    position: relative;
+    height: 600px;
+    width: 100%;
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;
+    justify-content: center;*/
+}
+.container{
+    height: 350px;
+    /*background-color: blue;*/
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-container {
+    
+  margin: 0 30px;
+  overflow: hidden;
+}
+
+.card{
+  /*background: #298f44;*/
+  background-color: #1e9117;
+  border-radius: 8px;
+  height: 350px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviewContainer{
+    width: 85%;
+    height: 90%;
+    /*background-color: violet;*/
+}
+.reviewContainer h1{
+    margin-top: 0px;
+    font-family: 'Lilita One', sans-serif;
+    color: white;
+    margin-bottom: 15px;
+
+}
+.actualReview{
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    font-style: italic;
+    color: white;
+    margin-bottom: 15px;
+}
+.starsContainer{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+}
+
+.date{
+    font-family: 'Monserrat', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    color: white;
+}
+.star{
+    height: 35px;
+    width: 35px;
+}
+
+#berns h1{
+    margin-bottom: 9px;
+}
+#berns .starsContainer{
+    margin-bottom: 5px;
+}
+/*.card .image-box {
+ 
+
+  
+  
+}
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.card .profile-details {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 15px;
+}*/
+/*.card .profile-details img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}*/
+
+
+.swiper-navBtn {
+  color: #000;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 18px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #000;
+}
+
+.waterColorButterflyContainer{
+    
+    z-index: 99;
+    position: absolute;
+    height: 220px;
+    width: 220px;
+    top: 3%;
+    right: 10%;
+    transform: scaleX(-1) rotate(30deg);
+
+}
+#waterColorButterfly{
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/*footer css*/
+
+.footerSection{
+    margin-top: 50px;
+    width: 100%;
+    height: 390px;
+    background-color: #f5a71c;
+    display: flex;
+    flex-direction: column;
+}
+.topFooter{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+}
+.bottomFooter{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*background-color: red;*/
+}
+.bottomFooter p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.nameAndSombrero{
+    height: 100%;
+    width: 35%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: black;*/
+    
+}
+.nameAndSombrero h1{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    margin-right: 0px;
+    /*background-color: blue;*/
+    width: 100%;
+    
+    text-align: center;
+    
+}
+
+#footerSombrero{
+    height: 140px;
+    width: 140px;
+}
+
+.restaurantInfo{
+    width: 21.66%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*background-color: red;*/
+}
+
+.wholeContainerFooter a{
+    text-decoration: none;
+    color: white;
+}
+
+.restaurantInfo .wholeContainerFooter{
+    height: 85%;
+    width: 75%;
+    /*background-color: blue;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.hoursInfo .wholeContainerFooter{
+    height: 85%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    /*background-color: red;*/
+}
+
+.websiteSections .wholeContainerFooter{
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    width: 75%;
+    /*background-color: yellowgreen;*/
+}
+
+/*.wholeContainerFooter{
+    height: 85%;
+    width: 90%;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+
+}*/
+
+.visitUs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    color: white;
+}
+
+.visitUs h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.visitUs p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+
+}
+
+.email{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.email h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.email p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.phoneNumber{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.phoneNumber h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+.phoneNumber p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+}
+
+.hoursInfo{
+    width: 21.66%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: blueviolet;*/
+    
+}
+
+.hours{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.hours h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+   
+}
+.hours h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 23px;
+    margin-top: 0px;
+}
+.hours p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+}
+
+.closed{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.closed h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 23px;
+    margin-top: 0px;
+}
+.closed p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+}
+
+.websiteSections{
+    width: 21.66%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /*background-color: violet;*/
+}
+
+.wholeContainerFooter h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+}
+
+
+
+
+@media (max-width: 1300px){
+    .centerButtons{
+        width: 35%;
+    }
+}
+
+@media (max-width: 1250px){
+    .nameAndSombrero{
+
+        width: 20%;
+        justify-content: flex-start;
+    }
+    .nameAndSombrero h1{
+        margin-top: 25px;
+        font-size: 28px;
+    }
+    #footerSombrero{
+        height: 100px;
+        width: 100px;
+    }
+    .restaurantInfo{
+        width: 35%;
+    }
+    .hoursInfo{
+        width: 22.5%;
+    }
+    .websiteSections{
+        width: 22.5%;
+    }
+}
+
+@media (max-width: 1200px){
+
+    .introToFoodContainer{
+        height: 700px;
+    }
+    #foodMessageIntro{
+        font-size: 80px;
+    }
+    .butterFlyContainer{
+        top: 20%;
+        height: 200px;
+        width: 200px;
+    }
+    .centerButtons{
+        width: 40%;
+    }
+
+    .ourOriginTextContainer{
+        width: 90%;
+        margin-right: 0px;
+    }
+    .ourStoryTextContainer{
+        width: 90%;
+        margin-left: 0px;
+    }
+
+    .ourStoryLeft{
+        width: 60%;
+        
+    }
+    .ourStoryRight{
+        width: 40%;
+    }
+
+    .ourOriginLeft{
+        width: 40%;
+    }
+    .ourOriginRight{
+        width: 60%;
+    }
+
+    
+
+    #michoacan{
+        height: 70%;
+    }
+    #restaurant{
+        height: 70%;
+    }
+
+
+    .allMenuOptionsContainer{
+        flex-direction: column;
+        
+        align-items: center;
+        margin-top: 50px;
+        height: 1000px;
+        /*background-color: red;*/
+        
+        
+    }
+    .allMenusLeft{
+        width: 100%;
+        height: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .menuTextContainer{
+        margin-left: 0px;
+        width: 98%;
+    }
+    .mainMenuTitle{
+        flex-direction: row;
+
+    }
+    .mainMenuTitle h1:nth-child(1){
+        margin-right: 10px;
+    }
+    .mainMenuTitle h1:nth-child(2){
+        margin-right: 10px;
+    }
+
+    .firstOrderButtonContainer{
+        display: none;
+    }
+    
+    
+    .allMenusRight{
+        height: 70%;
+        width: 100%;
+    }
+    .orderButtonContainer{
+        /*margin-left: 1%;*/
+        width: 70%;
+        display: flex;
+    }
+    
+    .menuOptionImageContainer{
+        justify-content: center;
+        align-items: center;
+    }
+    .menuNameContainer{
+        
+        /*margin-left: 2%;*/
+
+    }
+    .menuNameContainer h1{
+        margin-left: 2%;
+    }
+    .foodImage{
+        height: 95%;
+        width: 96%;
+    }
+    #lastMenuOption .menuOptionImageContainer .greenBox{
+        height: 95%;
+        width: 95%;
+    }
+
+    .menuAndCactus{
+        margin-bottom: 0px;
+        
+    }
+    .menuAndCactus img{
+        margin-bottom: 0px;
+
+    }
+    .menuAndCactus p{
+        margin-bottom: 0px;
+    }
+    .secondButton{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pinataAndBubbleContainer{
+        top: -20%;
+        right: 0%;
+        left: 50%;
+    }
+
+
+    
+
+
+    
+}
+
+@media (max-width: 1185px){
+    .restaurantName h1{
+        font-size: 25px;
+    }
+
+    .drinkImageContainer{
+        left: 3%;
+    }
+
+    .chalkContainer{
+        height: 70px;
+        width: 70px;
+    }
+
+    .drink{
+        width: 45%;
+    }
+    
+
+
+}
+
+@media (max-width: 1025px){
+    .opening{
+        height: 850px;
+    }
+    .ourOriginContainer{
+        flex-direction: column-reverse;
+        height: 900px;
+        
+        /*background-color: red;*/
+    }
+    
+    .ourStoryContainer{
+        flex-direction: column;
+        height: 900px;
+        /*background-color: red;*/
+    }
+
+    .ourStoryLeft{
+        width: 100%;
+        height: 65%;
+    }
+    .ourStoryRight{
+        width: 100%;
+        height: 35%;
+    }
+
+    .ourOriginLeft{
+        width: 100%;
+        height: 30%;
+    }
+    .ourOriginRight{
+        width: 100%;
+        height: 70%;
+    }
+    
+    #michoacan{
+        height: 100%;
+        width: 100%;
+    }
+    #restaurant{
+        height: 100%;
+        width: 100%;
+    }
+
+    .mainOriginTitle{
+        flex-direction: row;
+        font-size: 22px; 
+    }
+    .mainStoryTitle{
+        flex-direction: row;
+        font-size: 22px;
+    }
+    
+    .originAndCactus p{
+        margin-bottom: 0px;
+    }
+    .storyAndCactus p{
+        margin-bottom: 0px;
+    }
+
+    .mainStoryTitle h1:nth-child(1){
+        margin-right: 10px;
+        margin-top: 0px;
+    }
+    .mainStoryTitle h1:nth-child(2){
+        margin-top: 0px;
+    }
+    
+    .mainOriginTitle h1:nth-child(1){
+        margin-right: 10px;
+        margin-top: 0px;
+    }
+    .mainOriginTitle h1:nth-child(2){
+        margin-right: 10px;
+        margin-top: 0px;
+        
+    }
+    .mainOriginTitle h1:nth-child(3){
+        
+        margin-top: 0px;
+    }
+    
+    .originText{
+        font-size: 14px;
+    }
+    .storyText{
+        font-size: 14px;
+    }
+
+    .originAndCactus{
+        margin-bottom: 0px;
+    }
+    .storyAndCactus{
+        margin-bottom: 0px;
+    }
+    .firstButterFlyContainer{
+        top: 70%;
+        left: 25%;
+    }
+
+    .pinataAndBubbleContainer{
+        top: -30%;
+    }
+}
+
+@media (max-width: 1000px){
+    .restaurantName h1{
+        font-size: 25px;
+    }
+
+    .introToFoodContainer{
+        height: 600px;
+    }
+    #foodMessageIntro{
+        font-size: 65px;
+    }
+    .butterFlyContainer{
+        
+        height: 180px;
+        width: 180px;
+    }
+
+    
+    
+    
+}
+
+@media (max-width: 980px){
+    .opening{
+        height: 820px;
+    }
+
+    .ourOriginContainer{
+        height: 800px;
+    }
+    .ourStoryContainer{
+        height: 820px;
+    }
+
+    .ourStoryLeft{
+        height: 65%;
+    }
+    .ourStoryRight{
+        height: 35%;
+    }
+
+    .ourOriginRight{
+        height: 65%;
+    }
+    .ourOriginLeft{
+        height: 35%;
+    }
+    .centerButtons{
+       width: 45%;
+    }
+
+    .drink{
+        width: 55%;
+    }
+    .drinkImageContainer{
+        bottom: 20%;
+        height: 250px;
+        width: 170px;
+    }
+
+    #myles h1{
+        font-size: 28px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    
+
+    
+}
+
+@media (max-width: 900px){
+    .opening{
+        height: 750px;
+    }
+    .ourOriginContainer{
+        height: 700px;
+    }
+    .ourStoryContainer{
+        height: 720px;
+    }
+    .ourStoryLeft{
+        height: 60%;
+    }
+    .ourStoryRight{
+        height: 40%;
+    }
+
+    .ourOriginRight{
+        height: 60%;
+    }
+    .ourOriginLeft{
+        height: 40%;
+    }
+
+    .ourStoryTextContainer{
+        width: 98%;
+    }
+    .ourOriginTextContainer{
+        width: 98%;
+    }
+
+    .mainStoryTitle{
+        font-size: 20px;
+    }
+    .mainOriginTitle{
+        font-size: 20px;
+    }
+
+    /*.allMenuOptionsContainer{
+        height: 1100px;
+    }
+    .allMenusLeft{
+        height: 30%;
+
+    }
+    .allMenusRight{
+        height: 65%;
+    }
+    .mainMenuTitle{
+        flex-wrap: wrap;
+    }*/
+
+    .pinataAndBubbleContainer{
+        top: -35%;
+    }
+
+    .actualReview{
+        font-size: 13px;
+    }
+
+    
+
+}
+
+@media (max-width: 884px){
+    .allMenuOptionsContainer{
+        height: 1100px;
+    }
+    .allMenusLeft{
+        height: 30%;
+
+    }
+    .allMenusRight{
+        height: 65%;
+    }
+    .mainMenuTitle{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 915px){
+    
+    .optionsAndIcons{
+        display: none;
+    }
+    .responsiveNavBar{
+        /*background-color: blue;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        /*background-color: white;*/
+        width: 70%;
+        
+    }
+}
+
+@media (max-width: 860px){
+    .catchyOpening h1{
+        font-size: 40px;
+    }
+    .centerButtons{
+        width: 50%;
+    }
+    .orderOnlineButton{
+        height: 40px;
+        width: 150px;
+    }
+    .orderOnlineButton p{
+        font-size: 15px;
+    }
+    .seeMenuButton{
+        height: 40px;
+        width: 150px;
+    }
+    .seeMenuButton p{
+        font-size: 15px;
+    }
+
+    .introToFoodContainer{
+        height: 500px;
+    }
+    #foodMessageIntro{
+        font-size: 55px;
+    }
+    .butterFlyContainer{
+        height: 130px;
+        width: 130px;
+    }
+
+}
+
+@media (max-width: 850px){
+    .opening{
+        height: 650px;
+    }
+    .introToFoodContainer{
+        margin-top: 90px;
+    }
+
+    .sunContainer{
+        height: 100px;
+        width: 100px;
+
+    }
+
+    .visitUs h1{
+        font-size: 22px;
+    }
+    .visitUs p{
+        font-size: 16px;
+    }
+    .email h1{
+        font-size: 22px;
+        
+    }
+    .email p{
+        font-size: 16px;
+    }
+    .phoneNumber h1{
+        font-size: 22px;
+    }
+    .phoneNumber p{
+        font-size: 16px;
+    }
+    .hours h1{
+        font-size: 22px;
+    }
+    .hours h2{
+        font-size: 19px;
+    }
+    .hours p{
+        font-size: 16px;
+    }
+    .closed h2{
+        font-size: 19px;
+    }
+    .closed p{
+        font-size: 16px;
+    }
+    .websiteSections .wholeContainerFooter h1{
+        font-size: 22px;
+    }
+    .nameAndSombrero h1{
+        font-size: 24px;
+    }
+    #footerSombrero{
+        height: 70px;
+        width: 70px;
+    }
+
+
+}
+
+@media (max-width: 800px){
+    
+    .ourOriginContainer{
+        height: 600px;
+    }
+    .ourStoryContainer{
+        height: 620px;
+    }
+
+    .ourStoryLeft{
+        height: 50%;
+    }
+
+    .ourStoryRight{
+        height: 50%;
+    }
+    .ourOriginLeft{
+        height: 50%;
+    }
+    .ourOriginRight{
+        height: 50%;
+    }
+    .mainOriginTitle{
+        font-size: 16px;
+    }
+
+    .chalkContainer{
+        height: 60px;
+        width: 60px;
+    }
+    .pinataAndBubbleContainer{
+        top: -60%;
+        left: 35%;
+    }
+
+    .waterColorButterflyContainer{
+        width: 120px;
+        height: 120px;
+        top: 15%;
+        
+    }
+
+    .actualSocialContainer{
+        width: 12%;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 768px) {
+    .swiper-navBtn {
+      display: none;
+    }
+}
+
+/*change menu to horizontal scroll*/
+@media (max-width: 767px){
+    .allMenuOptionsContainer{
+        height: 650px;
+    }
+    .allMenusLeft{
+        height: 55%;
+    }
+
+    .allMenusRight{
+        /*background-color: blue;*/
+        height: 45%;
+    }
+    .allFoodOptionsContainer{
+        display: none;
+    }
+    .secondButton{
+        /*background-color: purple;*/
+    }
+    .allFoodOptionsHorizontalScroll{
+        /*height: 700px;*/
+        height: 70%;
+        display: block;
+        /*display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;*/
+
+        overflow: auto;
+        white-space: nowrap;
+    }
+    .menuOptionScroll{
+        display: inline-block;
+    }
+    .secondButton{
+        height: 30%;
+    }
+
+    .drink{
+        width: 65%;
+    }
+    .drinkImageContainer{
+        height: 190px;
+        width: 100px;
+        bottom: 60%;
+    }
+
+    .firstButterFlyContainer{
+        left: 35%;
+    }
+
+    
+
+    
+}
+
+@media (max-width: 700px){
+    .reviewContainer h1{
+        font-size: 23px;
+    }
+    #myles h1{
+        font-size: 23px;
+    }
+    .actualReview{
+        font-size: 13px;
+    }
+    .star{
+        height: 27px;
+        width: 27px;
+    }
+    .card{
+        height: 300px;
+    }
+}
+
+@media (max-width: 665px){
+    .footerSection{
+        height: auto;
+    }
+    .topFooter{
+        flex-direction: column-reverse;
+        
+    }
+
+    .websiteSections{
+        width: 100%;
+
+    }
+    .websiteSections .wholeContainerFooter{
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 80%;
+        /*background-color: blue;*/
+    }
+    .hoursInfo{
+        width: 100%;
+        /*background-color: violet;*/
+    }
+    .hoursInfo .wholeContainerFooter{
+        width: 80%;
+        height: 100%;
+        align-items: center;
+        /*background-color: red;*/
+    }
+    .hours{
+        align-items: center;
+    }
+    .restaurantInfo{
+        width: 100%;
+
+    }
+    .restaurantInfo .wholeContainerFooter{
+
+        width: 80%;
+        height: 100%;
+        /*background-color: red;*/
+    }
+    .visitUs{
+        align-items: center;
+    }
+    .email{
+        align-items: center;
+    }
+    .phoneNumber{
+        align-items: center;
+    }
+    .nameAndSombrero{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .nameAndSombrero h1{
+        margin-top: 10px;
+    }
+    
+    .bottomFooter p{
+        font-size: 17px;
+    }
+    .bottomFooter{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 650px){
+    .originAndCactus{
+        font-size: 20px;
+    }
+
+    .storyAndCactus{
+        font-size: 20px;
+    }
+
+    .opening{
+        height: 600px;
+    }
+    .centerButtons{
+        width: 60%;
+    }
+    .mainOriginTitle{
+        font-size: 15px;
+    }
+    .mainStoryTitle{
+        font-size: 15px;
+    }
+
+    .introToFoodContainer{
+        height: 350px;
+
+    }
+    #foodMessageIntro{
+        font-size: 45px;
+    }
+    .butterFlyContainer{
+        top: 15%;
+        height: 110px;
+        width: 110px;
+    }
+
+    #tacoOne{
+        top: 40%;
+    }
+
+
+
+}
+
+@media (max-width: 630px){
+    .restaurantName h1{
+        font-size: 15px;
+    }
+    .introToFoodContainer{
+        margin-top: 50px;
+    }
+
+    /*.drinkNameAndImage  p{
+        font-size: 25px;
+    }
+    .drinkNameAndImage img{
+        height: 25px;
+        width: 25px;
+    }
+
+    .price p{
+        font-size: 25px;
+    }*/
+
+    .aguasFrescasSectionContainer{
+        height: 680px;
+    }
+
+    .drinkImageContainer{
+        height: 180px;
+        width: 70px;
+        /*bottom: 10%;*/
+    }
+
+    .sunContainer{
+        height: 60px;
+        width: 60px;
+        top: 10%;
+        left: 85%;
+    }
+
+    .chalkContainer{
+        height: 45px;
+        width: 45px;
+        right: -11%;
+    }
+
+    .drink{
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 600px){
+    .nameAndXContainer h1{
+        font-size: 20px;
+    }
+    .xContainer{
+        height: 35px;
+        width: 35px;
+    }
+    .elements h1{
+        font-size: 17px;
+    }
+    #barAddress{
+        font-size: 13px;
+    }
+    #barPhoneNumber{
+        font-size: 13px;
+    }
+
+    .drinkNameAndImage p{
+        font-size: 30px;
+    }
+    .drinkNameAndImage img{
+        height: 30px;
+        width: 30px;
+    }
+    .price p{
+        font-size: 30px;
+    }
+    .chalkContainer{
+        right: -15%;
+    }
+
+}
+
+@media (max-width: 560px){
+
+    .mainOriginTitle{
+        /*width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;*/
+       
+        flex-wrap: wrap;
+    }
+    .mainStoryTitle{
+        /*width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;*/
+        width: 100%;
+        
+        flex-wrap: wrap;
+    }
+
+    /*.originAndCactus{
+        justify-content: center;
+    }
+    .storyAndCactus{
+        justify-content: center;
+    }*/
+
+    /*.ourStoryTextContainer{
+        align-items: center;
+    }*/
+    .ourOriginTextContainer{
+        /*align-items: center;*/
+        /*flex-wrap: wrap;*/
+    }
+
+    .ourStoryLeft{
+        height: 40%;
+    }
+    .ourStoryRight{
+        height: 60%;
+    }
+    .ourOriginLeft{
+        height: 60%;
+    }
+    .ourOriginRight{
+        height: 40%;
+    }
+
+
+    
+    /*.originText{
+        
+    }*/
+
+    .introToFoodContainer{
+        height: 300px;
+    }
+    #foodMessageIntro{
+        font-size: 32px;
+    }
+    .butterFlyContainer{
+        left: 65%;
+    }
+
+    .allMenuOptionsContainer{
+        height: 730px;
+    }
+
+    .menuTextContainer{
+        width: 95%;
+    }
+
+    .mainMenuTitle{
+        font-size: 20px;
+    }
+    #tacoSeven{
+        display: none;
+        /*background-color: blue;*/
+    }
+    .pinataAndBubbleContainer{
+        top: -65%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 505px){
+    .allMenuOptionsContainer{
+        height: 820px;
+    }
+    .firstButterFlyContainer{
+        left: 45%;
+    }
+    .waterColorButterflyContainer{
+        right: 5%;
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media (max-width: 500px){
+
+    .ourStoryContainer{
+        height: 660px;
+    }
+
+    /*.mainOriginTitle{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .originAndCactus{
+        justify-content: center;
+    }
+    .ourOriginTextContainer{
+        align-items: center;
+    }*/
+    .centerButtons{
+        width: 70%;
+    }
+    .opening{
+        height: 550px;
+    }
+    /*.ourOriginLeft{
+        height: 60%;
+    }
+    .ourOriginRight{
+        height: 40%;
+    }*/
+
+    #tacoTwo{
+        left: 10%;
+    }
+    #tacoThree{
+        left: 12%;
+        top: 91%;
+    }
+    #tacoFour{
+        
+    }
+    #tacoFive{
+        
+        top: 91%;
+    }
+    #tacoSix{
+        
+        top: 45%;
+        left: 80%;
+    }
+
+    .websiteSections .wholeContainerFooter{
+        width: 94%;
+       
+    }
+    .websiteSections .wholeContainerFooter h1{
+        font-size: 19px;
+       
+    }
+    .bottomFooter p{
+        text-align: center;
+        font-size: 15px;
+    }
+    .visitUs p{
+        text-align: center;
+    }
+
+    .actualSocialContainer{
+        width: 18%;
+    }
+
+
+    
+    
+
+    
+}
+
+/*smaller phone screens*/
+@media (max-width: 450px){
+
+    
+    .catchyOpening h1{
+        font-size: 34px;
+    }
+    .centerButtons{
+        width: 60%;
+    }
+    .orderOnlineButton{
+        height: 30px;
+        width: 100px;
+    }
+    .orderOnlineButton p{
+        font-size: 12px;
+    }
+    .seeMenuButton{
+        height: 30px;
+        width: 100px;
+        
+    }
+    .seeMenuButton p{
+        font-size: 12px;
+    }
+    .introToFoodContainer{
+        height: 240px;
+    }
+    .butterFlyContainer{
+        top: 5%;
+    }
+
+    .allMenuOptionsContainer{
+        height: 860px;
+    }
+
+    .drinkNameAndImage p{
+        font-size: 26px;
+    }
+    .drinkNameAndImage img{
+        height: 26px;
+        width: 26px;
+    }
+
+    .price p{
+        font-size: 26px;
+    }
+
+    .drinkTitles h1:nth-child(1){
+        
+        font-size: 28px;
+    }
+    .drinkTitles h2{
+        font-size: 18px;
+    }
+
+    .drinkImageContainer{
+       
+        /*bottom: -5%;*/
+        display: none;
+    }
+
+    .drink{
+        width: 70%;
+    }
+
+    .drinkTitles{
+        height: 30%;
+    }
+    .drinkOptions{
+        height: 70%;
+    }
+
+    .smallDrinkImageContainer{
+        display: block;
+        position: absolute;
+        top: 5%;
+        left: 0%;
+        height: 150px;
+        width: 150px;
+    }
+
+    .sunContainer{
+        left: 75%;
+        
+        height: 80px;
+        width: 80px;
+    }
+
+    .pinataAndBubbleContainer{
+       
+        top: -50%;
+        height: 200px;
+        width: 200px;
+    }
+    #pinata{
+        height: 90px;
+        width: 90px;
+    }
+    .bubbleContainer{
+        top: 7%;
+        left: 64%;
+    }
+    #bubble{
+        width: 80px;
+        height: 80px;
+    }
+    #bubbleText{
+        top: 20%;
+        font-size: 22px;
+    }
+
+    .aguasFrescasSectionContainer{
+        height: 600px;
+    }
+    
+
+
+    
+}
+
+@media (max-width: 430px){
+    .drinkTitles{
+        height: 35%;
+    }
+    .drinkOptions{
+        height: 65%;
+    }
+
+    .reviewTitle h1{
+        font-size: 22px;
+    }
+    .container{
+        padding: 10px 0;
+    }
+
+    .bottomTitle h1{
+        font-size: 22px;
+    }
+    .container{
+        padding: 10px 0;
+    }
+
+    .waterColorButterflyContainer{
+        top: 75%;
+        right: 12%;
+    }
+
+    
+}
+
+@media (max-width: 400px){
+    .ourOriginContainer{
+        /*height: 700px;*/
+        /*height: auto;*/
+        /*height: 620px;*/
+        height: auto;
+    }
+    .ourStoryContainer{
+        height: 720px;
+    }
+    .ourStoryLeft{
+        height: 35%;
+        /*height: 10%;*/
+    }
+    .ourStoryRight{
+        height: 65%;
+        
+    }
+    .ourOriginLeft{
+        height: 60%;
+    }
+    .ourOriginRight{
+        height: 40%;
+    }
+    #foodMessageIntro{
+        font-size: 24px;
+    }
+    .butterFlyContainer{
+        top: 15%;
+        height: 80px;
+        width: 80px;
+    }
+
+    .allMenuOptionsContainer{
+        height: 900px;
+    }
+
+    .sunContainer{
+        height: 60px;
+        width: 60px;
+        top: 5%;
+        
+    }
+
+    #tacoThree{
+        display: none;
+        
+    }
+
+    #tacoFive{
+        display: none;
+        
+    }
+    #tacoSix{
+       display: none;
+    }
+
+    .firstButterFlyContainer{
+        top: 80%;
+        left: 65%;
+    }
+
+    .slide-container{
+        margin: 0 40px;
+    }
+
+    .footerSection{
+        margin-top: 0px;
+    }
+
+    .chalkContainer{
+        height: 30px;
+        width: 30px;
+        bottom: 65%;
+        right: -10%;
+
+    }
+    .drink{
+        width: 83%;
+    }
+
+
+    
+
+
+
+}
+
+
+
+@media (max-width: 375px){
+    .mainOriginTitle{
+        font-size: 14px;
+    }
+    .mainStoryTitle{
+        font-size: 14px;
+    }
+    #sombrero{
+        height: 100px;
+        width: 100px;
+    }
+    .catchyOpening h1{
+        font-size: 28px;
+    }
+    .centerButtons{
+        width: 70%;
+    }
+
+    .mainMenuTitle{
+        font-size: 16px;
+    }
+
+    #tacoOne{
+       
+        top: 35%;
+        height: 50px;
+        width: 50px;
+    }
+    #tacoTwo{
+        height: 22px;
+        width: 22px;
+        
+    }
+    
+    #tacoFour{
+        top: 34%;
+        
+        height: 22px;
+        width: 22px;
+    }
+    
+    
+
+}
+
+@media (max-width: 350px){
+    #barAddress{
+        text-align: center;
+    }
+    #barPhoneNumber{
+        text-align: center;
+    }
+    .drinkNameAndImage p{
+        font-size: 22px;
+    }
+    .drinkNameAndImage img{
+        height: 22px;
+        width: 22px;
+    }
+    .price p{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 345px){
+    /*.ourOriginContainer{
+        height: 660px;
+    }*/
+}
+
+@media (max-width: 325px){
+    .centerButtons{
+        width: 80%;
+    }
+
+    .introToFoodContainer{
+        height: 210px;
+    }
+    #foodMessageIntro{
+        font-size: 20px;
+    }
+
+    .sunContainer{
+        
+        left: 75%;
+        height: 55px;
+        width: 55px;
+    }
+
+    .drink{
+        width: 80%;
+    }
+
+    .drinkImageContainer{
+        bottom: 0%;
+        height: 100px;
+        width: 60px;
+    }
+
+    .chalkContainer{
+        height: 20px;
+        width: 20px;
+        right: -8%;
+    }
+}
+
+@media (max-width: 300px){
+    .opening{
+        height: 480px;
+    }
+    #sombrero{
+        height: 70px;
+        width: 70px;
+    }
+    .catchyOpening h1{
+        font-size: 20px;
+    }
+    .orderOnlineButton{
+        height: 20px;
+        width: 70px;
+    }
+    .orderOnlineButton p{
+        font-size: 8px;
+    }
+    .seeMenuButton{
+        height: 20px;
+        width: 70px;
+    }
+    .seeMenuButton p{
+        font-size: 8px;
+    }
+
+    .ourStoryContainer{
+        height: 760px;
+    }
+
+    .allMenuOptionsContainer{
+        height: 970px;
+    }
+
+    .firstButterFlyContainer{
+        height: 40px;
+        width: 40px;
+        top: 10%;
+        left: 60%;
+    }
+
+    .bottomTitle{
+        flex-wrap: wrap;
+    }
+
+    .slide-container {
+    
+        margin: 0 30px;
+        overflow: hidden;
+    }
+
+    .websiteSections .wholeContainerFooter h1{
+        font-size: 15px;
+    }
+
+
+
+    
+
+    
+}
+
+@media (max-width: 250px){
+    .mainStoryTitle{
+        font-size: 12px;
+    }
+    .ourStoryContainer{
+        height: 780px;
+    }
+}

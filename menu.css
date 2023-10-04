@@ -1,0 +1,3005 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.dontHaveLine{
+    text-decoration: none;
+}
+
+.overlayNavBar{
+    width: 100%;
+    height: 0;
+    position: fixed;
+    /*to go over the content*/
+    z-index: 999;
+    background-color: #25a81d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.navigationElements{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.nameAndXContainer{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nameAndXContainer h1{
+    margin-left: 2%;
+    font-size: 28px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.xContainer{
+    margin-right: 2%;
+    height: 50px;
+    width: 50px;
+}
+#cross{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.elements{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.elements h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.elements a{
+    color: #fff;
+  
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.elements a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.elements a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+#barAddress{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    
+    margin-bottom: 0px;
+}
+#barPhoneNumber{
+    margin-top: 10px;
+    
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.navigationSocialIcons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.actualSocialContainer{
+    
+    width: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#navFacebook{
+    height: 30px;
+    width: 30px;
+}
+#navInsta{
+    height: 30px;
+    width: 30px;
+}
+
+.opening{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./menuImages/jarritos-mexican-soda-dEbc3mdmpLo-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    z-index: 0;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.topNavBar{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+
+}
+
+.restaurantName{
+    font-family: 'Montserrat', sans-serif;
+    
+    color: white;
+    z-index: 99;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.restaurantName h1{
+    margin-left: 15px;
+}
+
+.optionsAndIcons{
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+
+}
+
+
+.responsiveNavBar{
+    display: none;
+}
+
+.options{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: white;
+    z-index: 99;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.options a{
+    color: #fff;
+  
+    text-decoration: none;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.options a::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.options a:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+
+
+.options p:nth-child(2){
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.options p:nth-child(3){
+    margin-right: 20px;
+}
+.socials{
+    height: 100%;
+    z-index: 99;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.socials img:nth-child(3){
+    margin-right: 20px;
+}
+.socials img:nth-child(2){
+    margin-right: 10px;
+}
+.socials img:nth-child(1){
+    margin-right: 10px;
+}
+#insta{
+    height: 35px;
+    width: 35px;
+
+}
+
+#tiktok{
+    height: 35px;
+    width: 35px;
+}
+#facebook{
+    height: 35px;
+    width: 35px;
+}
+.circleContainer{
+    margin-right: 5%;
+    z-index: 99;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.lineMenu{
+    width: 20px;
+    height: 3px;
+    background-color: black;
+}
+.lineMenu:nth-child(1){
+    margin-bottom: 3px;
+}
+.lineMenu:nth-child(2){
+    margin-bottom: 3px;
+}
+
+.openingBottomPart{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.chefContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#chefImg{
+    z-index: 99;
+    height: 150px;
+    width: 150px;
+}
+.catchyOpening{
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.catchyOpening h1{
+    margin-top: 0px;
+    color: white;
+    z-index: 99;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 80px;
+}
+
+
+.topMenu{
+    margin-top: 100px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 800px;
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: row;
+}
+
+.topLeftMenu{
+    width: 40%;
+    height: 100%;
+    /*background-color: blue;*/
+    /*background-color: blue;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.topRightMenu{
+    /*background-color: red;*/
+    width: 60%;
+    height: 100%;
+    /*background-color: red;*/
+}
+
+.topBreakfast{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /*background-color: yellow;*/
+
+}
+
+.bottomKidsMenu{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /*background-color: yellowgreen;*/
+}
+
+.oneContainer{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#breakfast{
+    /*background-color: wheat;*/
+    position: relative;
+}
+
+
+.nameAndLineContainer{
+    display: flex;
+    flex-direction: column;
+    
+}
+#breakfastAndText{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+}
+#breakfastAndText h1{
+    font-family: 'Lilita One', cursive;
+    
+    color: tomato;
+    font-size: 55px;
+    
+    margin-bottom: 0px;
+}
+
+#breakfastAndText p{
+    margin-left: 2%;
+    font-family: 'Lilita One', cursive;
+    font-size: 28px;
+    margin-bottom: 0px;
+
+}
+
+.line{
+    height: 5px;
+    width: 60%;
+    background-color: black;
+}
+
+.foodItem{
+    /*width: 400px;*/
+    /*background-color: tomato;*/
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    /*background-color: antiquewhite;*/
+    
+    
+}
+
+.foodNameAndPrice{
+   
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.foodNameAndPrice h2{
+    font-family: 'Lilita One', cursive;
+    color: #028A0F;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.foodNameAndPrice p{
+    font-family: 'Lilita One', cursive;
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 2%;
+}
+.foodOptionText{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+
+}
+
+.kidsMenuAndPrice{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.kidsMenuAndPrice h1{
+    font-family: 'Lilita One', cursive;
+    
+    color: tomato;
+    font-size: 55px;
+    
+    margin-bottom: 0px;
+}
+
+.kidsMenuAndPrice p{
+    margin-left: 2%;
+    font-family: 'Lilita One', cursive;
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+.kidFoodItem{
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    width: 90%;
+    margin-left: 2%;
+}
+
+.tacoContainer{
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    height: 200px;
+    width: 200px;
+}
+.tacoImg{
+    height: 100%;
+    width: 100%;
+}
+
+.lunchAndDinnerTitleAndLine{
+    width: 100%;
+    height: 10%;
+    /*background-color: blue;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lunchAndDinnerTitleAndLine h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: 'Lilita One', cursive;
+    
+    color: tomato;
+    font-size: 55px;
+}
+.twoSidesContainer{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.lunchLeft{
+    
+    width: 50%;
+    height: 100%;
+    
+    /*background-color: yellow;*/
+}
+
+.lunchRight{
+    
+    position: relative;
+    width: 50%;
+    height: 100%;
+    
+    /*background-color: yellowgreen;*/
+}
+
+.lunchFoodItem{
+    
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    /*background-color: antiquewhite;*/
+}
+
+.lunchNameAndPrice{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.lunchNameAndPrice h2{
+    font-family: 'Lilita One', cursive;
+    color: #028A0F;
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.lunchNameAndPrice p{
+    font-family: 'Lilita One', cursive;
+    font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 2%;
+}
+
+.lunchOptionText{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.flourOption{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+.flourOption p:nth-child(1){
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+.flourOption p:nth-child(2){
+    font-family: 'Lilita One', cursive;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+
+.cornOption{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    
+}
+.cornOption p:nth-child(2){
+    font-family: 'Lilita One', cursive;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+#choice{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.nachosContainer{
+    position: absolute;
+    top: 52%;
+    left: 70%;
+    height: 100px;
+    width: 100px;
+}
+.nachosImg{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/*start of middle menu*/
+.middleMenu{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /*background-color: red;*/
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+.middleLeft{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.middleLeftTop{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /*background-color: blue;*/
+}
+
+.middleLeftBottom{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+.middleOneContainer{
+    position: relative;
+    width: 90%;
+    height: 100%;
+    /*background-color: bisque;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.middleRight{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 50%;
+    height: 100%;
+    /*background-color: red;*/
+}
+
+/*for testing*/
+/*.middleRight .middleOneContainer{
+    background-color: antiquewhite;
+}*/
+
+.drinkTitleAndLine{
+    display: flex;
+    flex-direction: column;
+}
+.drinkTitleAndLine h1{
+    font-family: 'Lilita One', cursive;
+    color: tomato;
+    font-size: 55px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+
+.drinkItem{
+    display: flex;
+    flex-direction: column;
+}
+.aguasFrescasNameAndPrices{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.aguasFrescasNameAndPrices h2{
+    font-family: 'Lilita One', cursive;
+    color: #028A0F;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+}
+.aguasFrescasNameAndPrices p{
+    margin-left: 2%;
+    font-family: 'Lilita One', cursive;
+    font-size: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.drinkOptions{
+    margin-top: 0px;
+    margin-bottom: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.martinellisContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+}
+.martinellisContainer p:nth-child(1){
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.martinellisContainer p:nth-child(2){
+    margin-left: 1%;
+    font-family: 'Lilita One', cursive;
+    font-weight: 300;
+    font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.sodaNameAndText{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    /*background-color: aqua;*/
+}
+
+/*for TESTING*/
+/*.middleLeftTop .middleOneContainer{
+    background-color: blueviolet;
+}*/
+
+.sodaNameAndText h2{
+    font-family: 'Lilita One', cursive;
+    color: #028A0F;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+.sodaNameAndText p{
+    margin-left: 2%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.drPepperContainer{
+    display: flex;
+    flex-direction: row;
+    /*background-color: aliceblue;*/
+}
+.drPepperContainer p:nth-child(1){
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.drPepperContainer p:nth-child(2){
+    font-family: 'Lilita One', cursive;
+    
+    font-size: 22px;
+    margin-left: 1%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.cokeInBottleContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.cokeInBottleContainer p:nth-child(1){
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.cokeInBottleContainer p:nth-child(2){
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 1%;
+    font-family: 'Lilita One', cursive;
+    font-size: 22px;
+}
+
+
+.energyDrinkContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+}
+.energyDrinkContainer h2{
+    font-family: 'Lilita One', cursive;
+    color: #028A0F;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+/*.energyDrinkContainer p:nth-child(1){
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+
+}
+
+.energyDrinkContainer p:nth-child(2){
+
+    font-family: 'Lilita One', cursive;
+    font-size: 18px;
+
+}*/
+
+#monster{
+    margin-left: 1%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#monsterPrice{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 1%;
+    font-family: 'Lilita One', cursive;
+    font-size: 22px;
+}
+
+.meatChoiceNameAndLine{
+    display: flex;
+    flex-direction: column;
+}
+.meatChoiceNameAndLine h1{
+    font-family: 'Lilita One', cursive;
+    color: tomato;
+    font-size: 55px;   
+    margin-bottom: 0px;
+}
+.meatChoiceNameAndLine p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+.meatItems{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+}
+
+.meatItems p:nth-child(1){
+    margin-top: 0px;
+}
+.meatItems p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.mexicanPlatesNameAndLine{
+    display: flex;
+    flex-direction: column;
+}
+.mexicanPlatesNameAndLine h1{
+    font-size: 55px;
+    font-family: 'Lilita One', cursive;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: tomato;
+
+}
+/*.mexicanPlatesNameAndLine p{
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}*/
+
+.mexicanPlateItem{
+    display: flex;
+    flex-direction: column;
+
+}
+.mexicanNameAndPrice{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.mexicanNameAndPrice h2{
+    font-family: 'Lilita One', cursive;
+    font-size: 32px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+    color: #028A0F;
+}
+
+.mexicanNameAndPrice p{
+    margin-left: 1%;
+    font-size: 28px;
+    font-family: 'Lilita One', cursive;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.text{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#changeText{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 0px;   
+}
+
+.juiceDrinkContainer{
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    top: 40%;
+    left: 55%;
+}
+.softDrink{
+    width: 100%;
+    height: 100%;
+}
+
+.enchiladasContainer{
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    top: 40%;
+    left: 70%;
+}
+.enchiladaImg{
+    width: 100%;
+    height: 100%;
+}
+
+.bottomMenu{
+    width: 100%;
+    height: 620px;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.bottomLeft{
+    width: 60%;
+    height: 100%;
+    /*background-color: blue;*/
+    display: flex;
+    flex-direction: column;
+}
+.bottomTop{
+    height: 40%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.bottomBottom{
+    height: 60%;
+    width: 100%;
+    /*background-color: chocolate;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.bottomRight{
+    width: 40%;
+    height: 100%;
+    /*background-color: yellowgreen;*/
+}
+
+.bottomOneContainer{
+    /*background-color: silver;*/
+    width: 90%;
+    height: 100%;
+
+}
+
+.tacoSaladNamePriceAndLine{
+    display: flex;
+    flex-direction: column;
+}
+.tacoSaladNameAndPrice{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.tacoSaladNameAndPrice h1{
+    font-family: 'Lilita One', cursive;
+    
+    color: tomato;
+    font-size: 55px;
+    
+    margin-bottom: 0px;
+}
+.tacoSaladNameAndPrice p{
+    margin-left: 2%;
+    font-family: 'Lilita One', cursive;
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+.tacoSaladText{
+    margin-left: 2%;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    width: 70%;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+}
+
+.seaFoodNameAndLine{
+    display: flex;
+    flex-direction: column;
+}
+.seaFoodNameAndLine h1{
+    font-family: 'Lilita One', cursive;
+    
+    color: tomato;
+    font-size: 55px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.seaFoodItem{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+}
+.seaFoodNameAndPrice{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.seaFoodNameAndPrice h2{
+    font-family: 'Lilita One', cursive;
+    color: #028A0F;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.seaFoodNameAndPrice p{
+    font-family: 'Lilita One', cursive;
+    
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 2%;
+}
+.tacoSaladNameAndPrice p{
+    font-family: 'Lilita One', cursive;
+    
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 2%;
+}
+
+.seafoodText{
+    margin-top: 0px;
+    
+    margin-bottom: 0px;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+}
+
+#taco-shrimp-burrito .seaFoodNameAndPrice h2:nth-last-child(2){
+    margin-left: 2%;
+}
+
+#taco-shrimp-tostada .seaFoodNameAndPrice h2:nth-last-child(2){
+    margin-left: 2%;
+}
+
+#shrimpBox{
+    position: relative;
+}
+
+.shrimpContainer{
+    position: absolute;
+    top: -10%;
+    left: 70%;
+    height: 170px;
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+#star{
+    
+    width: 100%;
+    height: 100%;
+}
+#shrimp{
+    position: absolute;
+    top: 25%;
+    transform: rotate(-30deg);
+    height: 110px;
+    width: 110px;
+}
+
+.sidesTitleAndLine{
+    display: flex;
+    flex-direction: column;
+}
+.sidesTitleAndLine h1{
+    font-family: 'Lilita One', cursive;
+    
+    color: tomato;
+    font-size: 55px;
+    
+    margin-bottom: 0px;
+}
+
+.side-rice{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2%;
+    align-items: baseline;
+    /*background-color: red;*/
+    width: 98%;
+}
+.side-rice h2{
+    font-family: 'Lilita One', cursive;
+    color: #028A0F;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 33.33%;
+}
+.side-rice p{
+    font-family: 'Lilita One', cursive;
+    
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 2%;
+}
+.small{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    width: 33.33%;
+}
+.large{
+    width: 33.33%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.side-beans{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2%;
+    align-items: baseline;
+    /*background-color: red;*/
+    width: 98%;
+}
+
+.side-beans h2{
+    font-family: 'Lilita One', cursive;
+    color: #028A0F;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 33.33%;
+}
+.side-beans p{
+    font-family: 'Lilita One', cursive;
+    
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 2%;
+}
+
+
+
+
+.sideItem{
+    margin-left: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    /*background-color: blue;*/
+    width: 62%;
+}
+
+.sideItem h2{
+    font-family: 'Lilita One', cursive;
+    color: #028A0F;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.sideItem p{
+    font-family: 'Lilita One', cursive;
+    
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 2%;
+}
+
+#onlyTaco{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+
+
+
+
+.footerSection{
+    margin-top: 100px;
+    width: 100%;
+    height: 390px;
+    background-color: #f5a71c;
+    display: flex;
+    flex-direction: column;
+}
+.topFooter{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+}
+.bottomFooter{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*background-color: red;*/
+}
+.bottomFooter p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.nameAndSombrero{
+    height: 100%;
+    width: 35%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: black;*/
+    
+}
+.nameAndSombrero h1{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    margin-right: 0px;
+    /*background-color: blue;*/
+    width: 100%;
+    
+    text-align: center;
+    
+}
+
+#footerSombrero{
+    height: 140px;
+    width: 140px;
+}
+
+.restaurantInfo{
+    width: 21.66%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*background-color: red;*/
+}
+
+.wholeContainerFooter a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.restaurantInfo .wholeContainerFooter{
+    height: 85%;
+    width: 75%;
+    /*background-color: blue;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.hoursInfo .wholeContainerFooter{
+    height: 85%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    /*background-color: red;*/
+}
+
+.websiteSections .wholeContainerFooter{
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    width: 75%;
+    /*background-color: yellowgreen;*/
+}
+
+/*.wholeContainerFooter{
+    height: 85%;
+    width: 90%;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+
+}*/
+
+.visitUs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    color: white;
+}
+
+.visitUs h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.visitUs p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+
+}
+
+.email{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.email h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+.email p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.phoneNumber{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.phoneNumber h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+.phoneNumber p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+}
+
+.hoursInfo{
+    width: 21.66%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: blueviolet;*/
+    
+}
+
+.hours{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.hours h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+   
+}
+.hours h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 23px;
+    margin-top: 0px;
+}
+.hours p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+}
+
+.closed{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.closed h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 23px;
+    margin-top: 0px;
+}
+.closed p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 0px;
+}
+
+.websiteSections{
+    width: 21.66%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /*background-color: violet;*/
+}
+
+.wholeContainerFooter h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0px;
+}
+
+
+
+
+
+
+@media (max-width: 1250px){
+    .topMenu{
+        height: 850px;
+    }
+    .foodNameAndPrice h2{
+        font-size: 28px;
+    }
+    .tacoContainer{
+        height: 170px;
+        width: 170px;
+        left: 60%;
+    }
+
+    .juiceDrinkContainer{
+        height: 90px;
+        width: 90px;
+        left: 65%;
+    }
+    .enchiladasContainer{
+        height: 80px;
+        width: 80px;
+
+    }
+
+    .bottomMenu{
+        height: 670px;
+    }
+
+    .bottomRight{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .seaFoodNameAndPrice{
+        flex-wrap: wrap;
+    }
+    .nameAndSombrero{
+
+        width: 20%;
+        justify-content: flex-start;
+    }
+    .nameAndSombrero h1{
+        margin-top: 25px;
+        font-size: 28px;
+    }
+    #footerSombrero{
+        height: 100px;
+        width: 100px;
+    }
+    .restaurantInfo{
+        width: 35%;
+    }
+    .hoursInfo{
+        width: 22.5%;
+    }
+    .websiteSections{
+        width: 22.5%;
+    }
+}
+
+@media (max-width: 1200px){
+    #breakfastAndText h1{
+        font-size: 40px;
+
+    }
+    #breakfastAndText p{
+        font-size: 22px;
+
+    }
+
+    .kidsMenuAndPrice h1{
+        font-size: 40px;
+    }
+    .kidsMenuAndPrice p{
+        font-size: 30px;
+    }
+
+    .lunchNameAndPrice h2{
+        font-size: 23px;   
+    }
+    .lunchNameAndPrice p{
+        font-size: 18px;
+    }
+    .nachosContainer{
+        top: 50%;
+    }
+    .tacoContainer{
+        height: 120px;
+        width: 120px;
+        left: 65%;
+    }
+
+    .tacoSaladNamePriceAndLine h1{
+        font-size: 40px;
+    }
+    .seaFoodNameAndLine h1{
+        font-size: 40px;
+    }
+    .sidesTitleAndLine h1{
+        font-size: 40px;
+    }
+    .bottomMenu{
+        height: 720px;
+    }
+
+}
+
+@media (max-width: 1185px){
+    .restaurantName h1{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1085px){
+    .nachosContainer{
+        height: 70px;
+        width: 70px;
+        top: 55%;
+        left: 75%;
+    }
+    .tacoContainer{
+        height: 90px;
+        width: 90px;
+        left: 75%;
+    }
+    .aguasFrescasNameAndPrices{
+        flex-wrap: wrap;
+    }
+    .middleLeftTop{
+        height: 60%;
+    }
+    .middleLeftBottom{
+        height: 40%;
+    }
+    .energyDrinkContainer{
+        flex-wrap: wrap;
+    }
+    /*.middleMenu{
+        height: 700px;
+        background-color: red;
+    }*/
+    .juiceDrinkContainer{
+        top: 35%;
+        left: 70%;
+        height: 65px;
+        width: 65px;
+    }
+    .enchiladasContainer{
+        height: 65px;
+        width: 65px;
+    }
+
+    .drinkTitleAndLine h1{
+        font-size: 40px;
+    }
+    .meatChoiceNameAndLine h1{
+        font-size: 40px;
+    }
+    .mexicanPlatesNameAndLine h1{
+        font-size: 40px;
+    }
+    .aguasFrescasNameAndPrices h2{
+        font-size: 28px;
+    }
+    .aguasFrescasNameAndPrices p{
+        font-size: 28px;
+    }
+    
+
+    .sodaNameAndText h2{
+        font-size: 28px;
+    }
+    .energyDrinkContainer h2{
+        font-size: 28px;
+    }
+    .bottomRight{
+        justify-content: flex-start;
+    }
+
+    .shrimpContainer{
+        height: 130px;
+        width: 130px;
+    }
+    #shrimp{
+        height: 70px;
+        width: 70px;
+    }
+
+    
+    .seaFoodNameAndPrice h2{
+        font-size: 28px;
+    }
+    .side-rice h2{
+        font-size: 28px;
+    }
+    .side-beans h2{
+        font-size: 28px;
+    }
+    .sideItem h2{
+        font-size: 28px;
+    }
+    .small p{
+        font-size: 24px;
+    }
+    .large p{
+        font-size: 24px;
+    }
+    .sideItem p{
+        font-size: 24px;
+    }
+
+    .bottomTop .bottomOneContainer{
+        width: 95%;
+    }
+    .bottomBottom .bottomOneContainer{
+        width: 95%;
+    }
+    .bottomRight .bottomOneContainer{
+        width: 95%;
+    }
+    
+
+}
+
+@media (max-width: 1025px){
+    .opening{
+        height: 850px;
+    }
+
+}
+
+@media (max-width: 980px){
+    .opening{
+        height: 820px;
+    }
+}
+
+/*here we start changing to smaller devices*/
+@media (max-width: 950px){
+    .topMenu{
+        flex-direction: column;
+        height: 1200px;
+        /*background-color: red;*/
+    }
+    .topLeftMenu{
+        flex-direction: row;
+        
+        width: 100%;
+        height: 35%;
+        
+    }
+    .topRightMenu{
+        width: 100%;
+        height: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .topBreakfast{
+        width: 50%;
+        height: 100%;
+        /*background-color: blueviolet;*/
+    }
+    .bottomKidsMenu{
+        width: 50%;
+        height: 100%;
+        /*background-color: aquamarine;*/
+        justify-content: flex-start;
+    }
+    .oneContainer{
+        /*background-color: antiquewhite;*/
+    }
+    #breakfast{
+       
+        justify-content: flex-start;
+    }
+
+    .twoSidesContainer{
+        width: 90%;
+        /*background-color: yellow;*/
+    }
+
+    .enchiladasContainer{
+        left: 80%;
+    }
+    .mexicanNameAndPrice{
+        flex-wrap: wrap;
+    }
+    .bottomTop{
+        height: 30%;
+    }
+    .bottomBottom{
+        height: 70%;
+    }
+
+    .bottomLeft{
+        width: 50%;
+    }
+    .bottomRight{
+        width: 50%;
+    }
+    .shrimpContainer{
+        top: -10%;
+        left: 60%;
+        height: 95px;
+        width: 95px;
+    }
+}
+
+@media (max-width: 915px){
+    .optionsAndIcons{
+        display: none;
+    }
+
+    .responsiveNavBar{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 40%;
+        
+    }
+
+    .restaurantName{
+        width: 60%;
+    }
+}
+
+@media (max-width: 900px){
+    .opening{
+        height: 750px;
+    }
+}
+
+
+
+@media (max-width:850px){
+    .opening{
+        height: 650px;
+    }
+    .enchiladasContainer{
+        top: 45%;
+    }
+    .visitUs h1{
+        font-size: 22px;
+    }
+    .visitUs p{
+        font-size: 16px;
+    }
+    .email h1{
+        font-size: 22px;
+        
+    }
+    .email p{
+        font-size: 16px;
+    }
+    .phoneNumber h1{
+        font-size: 22px;
+    }
+    .phoneNumber p{
+        font-size: 16px;
+    }
+    .hours h1{
+        font-size: 22px;
+    }
+    .hours h2{
+        font-size: 19px;
+    }
+    .hours p{
+        font-size: 16px;
+    }
+    .closed h2{
+        font-size: 19px;
+    }
+    .closed p{
+        font-size: 16px;
+    }
+    .websiteSections .wholeContainerFooter h1{
+        font-size: 22px;
+    }
+    .nameAndSombrero h1{
+        font-size: 24px;
+    }
+    #footerSombrero{
+        height: 70px;
+        width: 70px;
+    }
+}
+
+@media (max-width: 800px){
+    .actualSocialContainer{
+        width: 12%;
+    }
+}
+
+@media (max-width: 780px){
+    .tacoContainer{
+        height: 65px;
+        width: 65px;
+        top: 35%;
+    }
+    .nachosContainer{
+        top: 57%;
+    }
+}
+
+@media (max-width: 750px){
+    .topBreakfast{
+        justify-content: center;
+    }
+    .bottomKidsMenu{
+        justify-content: center;
+    }
+    .foodNameAndPrice h2{
+        font-size: 23px;
+    }
+    .foodNameAndPrice p{
+        font-size: 20px;
+    }
+    #breakfastAndText h1{
+        font-size: 33px;
+
+    }
+    #breakfastAndText p{
+        font-size: 20px;
+    }
+    .kidsMenuAndPrice h1{
+        font-size: 33px;
+
+    }
+    .kidsMenuAndPrice p{
+        font-size: 28px;
+    }
+    .tacoContainer{
+        height: 55px;
+        width: 55px;
+        top: 30%;
+    }
+
+    .drinkTitleAndLine h1{
+        font-size: 33px;
+    }
+    .meatChoiceNameAndLine h1{
+        font-size: 33px;
+    }
+    .mexicanPlatesNameAndLine h1{
+        font-size: 33px;
+    }
+    .aguasFrescasNameAndPrices h2{
+        font-size: 23px;
+    }
+    .aguasFrescasNameAndPrices p{
+        font-size: 23px;
+    }
+    .drinkOptions{
+        font-size: 20px;
+    }
+    .martinellisContainer{
+        font-size: 20px;
+    }
+    .sodaNameAndText h2{
+        font-size: 23px;
+    }
+    .sodaNameAndText p{
+        font-size: 20px;
+    }
+    .drPepperContainer p{
+        font-size: 20px;
+    }
+    .cokeInBottleContainer p{
+        font-size: 20px;
+    }
+    .energyDrinkContainer h2{
+        font-size: 23px;
+    }
+    #monster{
+        font-size: 20px;
+    }
+    #monsterPrice{
+        font-size: 20px;
+    }
+    .meatChoiceNameAndLine h1{
+        font-size: 33px;
+    }
+    .meatItems p{
+        font-size: 20px;
+    }
+
+    .mexicanPlatesNameAndLine h1{
+        font-size: 33px;
+    }
+    .text{
+        font-size: 20px;
+    }
+    .mexicanNameAndPrice h2{
+        font-size: 23px;
+    }
+    .mexicanNameAndPrice p{
+        font-size: 20px;
+    }
+
+    .drPepperContainer{
+        flex-wrap: wrap;
+    }
+
+    .tacoSaladNameAndPrice h1{
+        font-size: 33px;
+    }
+    
+    
+    .seaFoodNameAndLine h1{
+        font-size: 33px;
+    }
+    .seaFoodNameAndPrice h2{
+        font-size: 23px;
+    }
+    .seaFoodNameAndPrice p{
+        font-size: 20px;
+    }
+
+    .sidesTitleAndLine h1{
+        font-size: 33px;
+    }
+    .side-rice h2{
+        font-size: 23px;
+    }
+    .small p{
+        font-size: 20px;
+    }
+    .large p{
+        font-size: 20px;
+    }
+    .sideItem h2{
+        font-size: 23px;
+    }
+    .sideItem p{
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+@media (max-width: 700px){
+    .topMenu{
+        height: 1300px;
+    }
+    .topBreakfast{
+        justify-content: flex-end;
+    }
+    .bottomKidsMenu{
+        justify-content: flex-start;
+    }
+    .enchiladasContainer{
+        top: 35%;
+    }
+    .nachosContainer{
+        left: 80%;
+    }
+}
+
+/*make everything into a column*/
+@media (max-width: 665px){
+    .topMenu{
+        height: auto;
+        /*background-color: red;*/
+    }
+    .topLeftMenu{
+        flex-direction: column;
+    }
+    .oneContainer{
+        width: 85%;
+        /*background-color: antiquewhite;*/
+    }
+    .topBreakfast{
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+    }
+    .bottomKidsMenu{
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+    }
+    #breakfastAndText h1{
+        font-size: 55px;
+    }
+    #breakfastAndText p{
+        font-size: 28px;
+    }
+    .foodNameAndPrice h2{
+        font-size: 35px;
+    }
+    .foodNameAndPrice p{
+        font-size: 35px;
+    }
+    .kidsMenuAndPrice h1{
+        font-size: 55px;
+    }
+    .kidsMenuAndPrice p{
+        font-size: 45px;
+    }
+    .kidFoodItem{
+        font-size: 25px;
+    }
+    .tacoContainer{
+        height: 100px;
+        width: 100px;
+        top: 60%;
+        left: 70%;
+    }
+    .foodOptionText{
+        font-size: 25px;
+    }
+
+    .topRightMenu{
+        /*background-color: red;*/
+       
+    }
+    .twoSidesContainer{
+        /*background-color: aliceblue;*/
+        flex-direction: column;
+        width: 80%;
+        
+        
+    }
+    .lunchLeft{
+        width: 100%;
+        /*background-color: aqua;*/
+    }
+    .lunchRight{
+        width: 100%;
+        /*background-color: blue;*/
+    }
+    .lunchAndDinnerTitleAndLine{
+        /*background-color: blue;*/
+        width: 85%;
+        align-items: flex-start;
+        
+    }
+
+    .lunchNameAndPrice h2{
+        font-size: 35px;
+
+    }
+    .lunchNameAndPrice p{
+        font-size: 35px;
+    }
+    .lunchOptionText{
+        font-size: 25px;
+    }
+    .flourOption p:nth-child(1){
+        font-size: 25px;
+    }
+    .flourOption p:nth-child(2){
+        font-size: 25px;
+    }
+    .cornOption p:nth-child(1){
+        font-size: 25px;
+    }
+    .cornOption p:nth-child(2){
+        font-size: 25px;
+    }
+
+    .middleMenu{
+        
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    .middleLeft{
+        
+        width: 85%;
+    }
+    
+    .middleRight{
+        
+        width: 85%;
+    }
+    .middleOneContainer{
+        /*background-color: blueviolet;*/
+        width: 100%;
+    }
+    .drinkTitleAndLine h1{
+        font-size: 55px;
+    }
+    .meatChoiceNameAndLine h1{
+        font-size: 55px;
+    }
+    .mexicanPlatesNameAndLine h1{
+        font-size: 55px;
+    }
+    .aguasFrescasNameAndPrices{
+        flex-wrap: wrap;
+    }
+    .aguasFrescasNameAndPrices h2{
+        font-size: 35px;
+    }
+    .aguasFrescasNameAndPrices p{
+        font-size: 30px;
+    }
+    .drinkOptions{
+        font-size: 25px;
+    }
+    .martinellisContainer p:nth-child(1){
+        font-size: 25px;
+    }
+    .martinellisContainer p:nth-child(2){
+        font-size: 25px;
+    }
+    .sodaNameAndText h2{
+        font-size: 35px;
+    }
+    .sodaNameAndText p{
+        font-size: 25px;
+    }
+    .drPepperContainer p:nth-child(1){
+        font-size: 25px;
+    }
+    .drPepperContainer p:nth-child(2){
+        font-size: 25px;
+    }
+    .cokeInBottleContainer p:nth-child(1){
+        font-size: 25px;
+    }
+    .cokeInBottleContainer p:nth-child(2){
+        font-size: 25px;
+    }
+    .energyDrinkContainer{
+        flex-wrap: wrap;
+    }
+    .energyDrinkContainer h2{
+        font-size: 35px;
+
+    }
+    #monster{
+        font-size: 25px;
+    }
+    #monsterPrice{
+        font-size: 25px;
+    }
+
+    
+    .meatItems p{
+        font-size: 25px;
+    }
+
+    .text{
+        font-size: 25px;
+    }
+    .mexicanNameAndPrice h2{
+        font-size: 35px;
+    }
+    .mexicanNameAndPrice p{
+        font-size: 35px;
+    }
+    .juiceDrinkContainer{
+        left: 75%;
+        top: 45%;
+    }
+    .enchiladasContainer{
+        top: 60%;
+    }
+
+
+    /*make changes to footer*/
+    .footerSection{
+        height: auto;
+    }
+    .topFooter{
+        flex-direction: column-reverse;
+        
+    }
+
+    .websiteSections{
+        width: 100%;
+
+    }
+    .websiteSections .wholeContainerFooter{
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 80%;
+        /*background-color: blue;*/
+    }
+    .hoursInfo{
+        width: 100%;
+        /*background-color: violet;*/
+    }
+    .hoursInfo .wholeContainerFooter{
+        width: 80%;
+        height: 100%;
+        align-items: center;
+        /*background-color: red;*/
+    }
+    .hours{
+        align-items: center;
+    }
+    .restaurantInfo{
+        width: 100%;
+
+    }
+    .restaurantInfo .wholeContainerFooter{
+
+        width: 80%;
+        height: 100%;
+        /*background-color: red;*/
+    }
+    .visitUs{
+        align-items: center;
+    }
+    .email{
+        align-items: center;
+    }
+    .phoneNumber{
+        align-items: center;
+    }
+    .nameAndSombrero{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .nameAndSombrero h1{
+        margin-top: 10px;
+    }
+    
+    .bottomFooter p{
+        font-size: 17px;
+    }
+    .bottomFooter{
+        margin-bottom: 20px;
+    }
+    /*end of footer change*/
+    .bottomMenu{
+        flex-direction: column;
+        height: auto;
+    }
+    .bottomLeft{
+        width: 100%;
+        height: 40%;
+    }
+    .bottomRight{
+        width: 100%;
+        height: 60%;
+    }
+    .bottomTop{
+        width: 100%;
+        height: 30%;
+        justify-content: center;
+    }
+    .bottomTop .bottomOneContainer{
+        width: 90%;
+    }
+    .bottomBottom{
+        width: 100%;
+        height: 70%;
+        justify-content: center;
+    }
+    .bottomBottom .bottomOneContainer{
+        width: 90%;
+    }
+    .shrimpContainer{
+        left: 80%;
+        top: -5%;
+    }
+
+    .tacoSaladNamePriceAndLine h1{
+        font-size: 55px;
+    }
+    .tacoSaladNamePriceAndLine p{
+        font-size: 45px;
+    }
+    .tacoSaladText{
+        font-size: 25px;
+    }
+    .seaFoodNameAndLine h1{
+        font-size: 55px;
+    }
+    .seaFoodNameAndPrice h2{
+        font-size: 35px;
+    }
+    .seaFoodNameAndPrice p{
+        font-size: 35px;
+    }
+    .seafoodText{
+        font-size: 25px;
+    }
+    .bottomRight{
+        justify-content: center;
+    }
+    .bottomRight .bottomOneContainer{
+        width: 90%;
+    }
+    .sidesTitleAndLine h1{
+        font-size: 55px;
+    }
+    .tacoSaladText{
+        margin-left: 0%;
+    }
+    .seaFoodItem{
+        margin-left: 0%;
+    }
+    .side-rice{
+        margin-left: 0%;
+    }
+    .side-beans{
+        margin-left: 0%;
+    }
+    .sideItem{
+        margin-left: 0%;
+    }
+    .side-rice h2{
+        font-size: 35px;
+    }
+    .small p{
+        font-size: 28px;
+    }
+    .large p{
+        font-size: 28px;
+    }
+    .side-beans h2{
+        font-size: 35px;
+    }
+    .sideItem h2{
+        font-size: 35px;
+    }
+    .sideItem p{
+        font-size: 28px;
+    }
+    #onlyTaco{
+        font-size: 25px;
+    }
+    .seaFoodNameAndLine h1{
+        margin-top: 10px;
+    }
+    
+
+
+
+
+}
+
+@media (max-width: 650px){
+    .opening{
+        height: 600px;
+    }
+}
+
+@media (max-width: 600px){
+    #breakfastAndText{
+        flex-wrap: wrap;
+    }
+    #breakfastAndText h1{
+        font-size: 32px;
+    }
+    #breakfastAndText p{
+        margin-top: 0px;
+    }
+    .kidsMenuAndPrice h1{
+        font-size: 30px;
+    }
+
+    .foodNameAndPrice h2{
+        font-size: 30px;
+    }
+    .foodNameAndPrice p{
+        font-size: 30px;
+    }
+    .foodOptionText{
+        font-size: 17px;
+    }
+    .kidFoodItem{
+        font-size: 17px;
+    }
+
+    .foodNameAndPrice{
+        flex-wrap: wrap;
+    }
+    .kidsMenuAndPrice p{
+        font-size: 30px;
+    }
+
+    .tacoContainer{
+        height: 70px;
+        width: 70px;
+        left: 60%;
+        top: 40%;
+    }
+    .nachosContainer{
+        top: 60%;
+        left: 90%;
+    }
+    .lunchAndDinnerTitleAndLine h1{
+        font-size: 35px;
+    }
+    .lunchNameAndPrice h2{
+        font-size: 30px;
+        
+    }
+    .lunchNameAndPrice p{
+        font-size: 30px;
+    }
+    .lunchOptionText{
+        font-size: 17px;
+    }
+    .lunchNameAndPrice{
+        flex-wrap: wrap;
+    }
+    .flourOption p:nth-child(1){
+        font-size: 17px;
+    }
+    .flourOption p:nth-child(2){
+        font-size: 25px;
+    }
+    .cornOption p:nth-child(1){
+        font-size: 17px;
+    }
+    .cornOption p:nth-child(2){
+        font-size: 25px;
+    }
+
+    /*.enchiladasContainer{
+        top: 40%;
+    }*/
+
+    .drinkTitleAndLine h1{
+        font-size: 32px;
+    }
+    .meatChoiceNameAndLine h1{
+        font-size: 32px;
+    }
+    .mexicanPlatesNameAndLine h1{
+        font-size: 32px;
+    }
+
+    .aguasFrescasNameAndPrices h2{
+        font-size: 30px;
+    }
+    .aguasFrescasNameAndPrices p{
+        font-size: 30px;
+    }
+    .drinkOptions{
+        font-size: 17px;
+    }
+    
+    .martinellisContainer p:nth-child(1){
+        font-size: 17px;
+    }
+    .martinellisContainer p:nth-child(2){
+        font-size: 20px;
+    }
+    .sodaNameAndText h2{
+        font-size: 30px;
+    }
+    .sodaNameAndText p{
+        font-size: 17px;
+    }
+    .drPepperContainer p:nth-child(1){
+        font-size: 17px;
+    }
+    .drPepperContainer p:nth-child(1){
+        font-size: 20px;
+    }
+    .cokeInBottleContainer p:nth-child(1){
+        font-size: 17px;
+    }
+    .cokeInBottleContainer p:nth-child(2){
+        font-size: 20px;
+    }
+    .energyDrinkContainer h2{
+        font-size: 30px;
+    }
+    #monster{
+        font-size: 17px;
+    }
+    #monsterPrice{
+        font-size: 20px;
+    }
+    
+    .meatItems p{
+        font-size: 17px;
+    }
+    .text{
+        font-size: 17px;
+    }
+    .mexicanNameAndPrice h2{
+        font-size: 30px;
+    }
+    .mexicanNameAndPrice p{
+        font-size: 30px;
+    }
+    #changeText{
+        font-size: 17px;
+    }
+
+    .tacoSaladNamePriceAndLine h1{
+        font-size: 32px;
+    }
+    .tacoSaladNamePriceAndLine p{
+        font-size: 30px;
+    }
+    .tacoSaladText{
+        font-size: 17px;
+    }
+
+    .seaFoodNameAndLine h1{
+        font-size: 32px;
+    }
+    .seaFoodNameAndPrice h2{
+        font-size: 30px;
+    }
+    .seaFoodNameAndPrice p{
+        font-size: 30px;
+    }
+    .seafoodText{
+        font-size: 17px;
+    }
+    .sidesTitleAndLine h1{
+        font-size: 32px;
+    }
+    .side-rice h2{
+        font-size: 30px;
+    }
+    .small p{
+        font-size: 28px;
+    }
+    .large p{
+        font-size: 28px;
+    }
+    .side-beans h2{
+        font-size: 30px;
+    }
+    .sideItem h2{
+        font-size: 30px;
+    }
+    .sideItem p{
+        font-size: 28px;
+    }
+    #onlyTaco{
+        font-size: 17px;
+    }
+
+    .nameAndXContainer h1{
+        font-size: 20px;
+    }
+    .xContainer{
+        height: 35px;
+        width: 35px;
+    }
+    .elements h1{
+        font-size: 17px;
+    }
+    #barAddress{
+        font-size: 13px;
+    }
+    #barPhoneNumber{
+        font-size: 13px;
+    }
+
+
+
+
+
+
+}
+
+/*increase the width of oneContainer*/
+@media (max-width: 500px){
+
+    .opening{
+        height: 550px;
+    }
+    .oneContainer{
+        width: 92%;
+    }
+    .twoSidesContainer{
+        /*background-color: aliceblue;*/
+        width: 92%;
+    }
+    .lunchFoodItem{
+        width: 100%;
+    }
+    .lunchLeft{
+        /*background-color: violet;*/
+        width: 100%;
+    }
+    .lunchAndDinnerTitleAndLine{
+       
+        width: 92%;
+    }
+    .lunchAndDinnerTitleAndLine h1{
+        
+        /*background-color: blue;*/
+        font-size: 40px;
+    }
+    .topRightMenu{
+        /*background-color: blueviolet;*/
+    }
+    .lunchNameAndPrice{
+        flex-wrap: wrap;
+    }
+    .lunchFoodItem{
+        /*background-color: antiquewhite;*/
+    }
+    .nachosContainer{
+        top: 85%;
+        left: 75%;
+    }
+
+    .middleLeft{
+        width: 92%;
+    }
+    .middleRight{
+        width: 92%;
+    }
+    .enchiladasContainer{
+        top: 50%;
+    }
+
+    .websiteSections .wholeContainerFooter{
+        width: 94%;
+       
+    }
+    .websiteSections .wholeContainerFooter h1{
+        font-size: 19px;
+       
+    }
+    .bottomFooter p{
+        text-align: center;
+        font-size: 15px;
+    }
+    .visitUs p{
+        text-align: center;
+    }
+
+    .bottomTop .bottomOneContainer{
+        width: 92%;
+    }
+    .bottomBottom .bottomOneContainer{
+        width: 92%;
+    }
+    .bottomRight .bottomOneContainer{
+        width: 92%;
+    }
+    .shrimpContainer{
+        height: 70px;
+        width: 70px;
+    }
+    #shrimp{
+        height: 50px;
+        width: 50px;
+    }
+
+    .actualSocialContainer{
+        width: 18%;
+    }
+    
+
+
+    
+}
+
+@media (max-width: 450px){
+    .catchyOpening h1{
+        font-size: 55px;
+    }
+    #chefImg{
+        height: 100px;
+        width: 100px;
+    }
+
+    .restaurantName h1{
+        font-size: 18px;
+    }
+    .responsiveNavBar{
+        
+        width: 35%;
+
+    }
+    .restaurantName{
+        
+        width: 65%;
+    }
+
+}
+
+@media (max-width: 400px){
+    
+    .lunchNameAndPrice p{
+        margin-left: 1%;
+    }
+    
+    #breakfastAndText p{
+        margin-left: 0%;
+    }
+    .foodNameAndPrice p{
+        margin-left: 0%;
+    }
+    .nachosContainer{
+        height: 45px;
+        width: 45px;
+        top: 92%;
+        left: 80%;
+    }
+    
+    .tacoContainer{
+        left: 80%;
+        
+    }
+    .juiceDrinkContainer{
+        height: 50px;
+        width: 50px;
+        top: 45%;
+    }
+    .enchiladasContainer{
+        height: 50px;
+        width: 50px;
+        top: 7%;
+    }
+    .side-rice h2{
+        width: auto;
+        
+
+    }
+    .side-beans{
+        flex-wrap: wrap;
+    }
+    .side-beans h2{
+        width: auto;
+
+    }
+    .small{
+        width: auto;
+        margin-left: 2%;
+        
+    }
+    .large{
+        width: auto;
+        margin-left: 2%;
+        
+    }
+    .side-rice{
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 350px){
+    .nachosContainer{
+        height: 40px;
+        width: 40px;
+        top: 95%;
+        left: 87%;
+    }
+    .tacoContainer{
+        left: 75%;
+    }
+    .lunchAndDinnerTitleAndLine{
+        flex-wrap: wrap;
+    }
+    .lunchAndDinnerTitleAndLine h1{
+        font-size: 32px;
+    }
+    .shrimpContainer{
+        left: 70%;
+    }
+    .sideItem{
+        width: 80%;
+    }
+
+    #barAddress{
+        text-align: center;
+    }
+    #barPhoneNumber{
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 300px){
+    .opening{
+        height: 480px;
+    }
+    .restaurantName h1{
+        font-size: 14px;
+    }
+    .responsiveNavBar{
+        justify-content: center;
+    }
+    #chefImg{
+        height: 90px;
+        width: 90px;
+    }
+    .catchyOpening h1{
+        font-size: 42px;
+    }
+    .tacoContainer{
+        height: 55px;
+        width: 55px;
+        top: 85%;
+        left: 70%;
+
+    }
+    .flourOption{
+        flex-wrap: wrap;
+    }
+    .cornOption{
+        flex-wrap: wrap;
+    }
+    .juiceDrinkContainer{
+        top: 2%;
+    }
+    .enchiladasContainer{
+        top: 45%;
+    }
+    .sodaNameAndText{
+        flex-wrap: wrap;
+    }
+    .sodaNameAndText p{
+        margin-top: 0px;
+    }
+
+    .websiteSections .wholeContainerFooter h1{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 250px){
+    .enchiladasContainer{
+        left: 75%;
+    }
+}
+
